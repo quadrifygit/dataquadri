@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relatórios — Flávia Lancha | Quadrify</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text: #eef4ff;
+      --muted-2: #9aa6bb;
+      --title: #43b6ff;
+      --border: rgba(255,255,255,0.08);
+      --row-border: rgba(255,255,255,0.08);
+      --btn1: #3f86ff;
+      --btn2: #2d6ff0;
+      --shadow: 0 18px 46px rgba(0,0,0,0.38);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background:
+        radial-gradient(1100px 420px at 12% -5%, rgba(53, 128, 255, 0.14), transparent 58%),
+        radial-gradient(900px 320px at 100% 0%, rgba(52, 107, 255, 0.10), transparent 55%),
+        linear-gradient(180deg, #030813 0%, #07101f 100%);
+      color: var(--text);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      padding: 0;
+    }
+
+    .page {
+      width: min(1079px, 100%);
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .hero {
+      margin-top: 0;
+      min-height: 184px;
+      background: linear-gradient(180deg, rgba(7,16,31,0.98), rgba(6,14,28,0.99));
+      border: 1px solid var(--border);
+      border-top: 0;
+      border-radius: 0 0 24px 24px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(900px 250px at 0% 0%, rgba(65, 182, 255, 0.06), transparent 60%),
+        radial-gradient(600px 260px at 100% 0%, rgba(53, 109, 255, 0.06), transparent 55%);
+    }
+
+    .heroInner {
+      min-height: 184px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 22px 48px;
+      text-align: center;
+    }
+
+    .heroText {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    .heroTitle {
+      margin: 0;
+      font-size: 42px;
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--title);
+    }
+
+    .heroSubtitle {
+      margin-top: 8px;
+      font-size: 16px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: #99a7c0;
+    }
+
+    .glowLine {
+      height: 11px;
+      margin: 10px 0 22px;
+      border-radius: 999px;
+      background:
+        radial-gradient(40% 100% at 50% 50%, rgba(66, 139, 255, 0.34), transparent 75%),
+        linear-gradient(90deg, rgba(43,90,186,0), rgba(61,126,255,0.72), rgba(43,90,186,0));
+      box-shadow:
+        0 0 18px rgba(61,126,255,0.20),
+        inset 0 0 10px rgba(61,126,255,0.14);
+    }
+
+    .contentCard {
+      background: linear-gradient(180deg, rgba(7,16,31,0.98), rgba(7,16,31,0.99));
+      border: 1px solid var(--border);
+      border-radius: 26px 26px 0 0;
+      box-shadow: var(--shadow);
+      padding: 40px 48px 44px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contentCard::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(800px 260px at 100% 0%, rgba(65, 182, 255, 0.04), transparent 56%),
+        radial-gradient(800px 260px at 0% 100%, rgba(53, 109, 255, 0.04), transparent 56%);
+    }
+
+    .sectionTitle {
+      position: relative;
+      z-index: 2;
+      margin: 0;
+      color: #3f8fff;
+      font-size: 22px;
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .sectionLine {
+      position: relative;
+      z-index: 2;
+      height: 1px;
+      margin: 10px 0 18px;
+      background: linear-gradient(
+        90deg,
+        rgba(63, 143, 255, 1) 0%,
+        rgba(63, 143, 255, 0.72) 35%,
+        rgba(63, 143, 255, 0.28) 100%
+      );
+    }
+
+    .sectionText {
+      position: relative;
+      z-index: 2;
+      margin: 0 0 24px;
+      color: var(--muted-2);
+      font-size: 16px;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    .sectionText strong {
+      color: #dce7fb;
+      font-weight: 800;
+    }
+
+    .reportsList {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .reportItem {
+      min-height: 70px;
+      background: linear-gradient(180deg, rgba(11,20,39,0.98), rgba(9,17,34,0.98));
+      border: 1px solid var(--row-border);
+      border-radius: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 18px 14px 18px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+    }
+
+    .reportCity {
+      color: rgba(239,244,255,0.95);
+      font-size: 17px;
+      line-height: 1.3;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      padding-right: 14px;
+    }
+
+    .openBtn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 141px;
+      height: 50px;
+      padding: 0 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 15px;
+      line-height: 1;
+      font-weight: 800;
+      background: linear-gradient(180deg, var(--btn1) 0%, var(--btn2) 100%);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 10px 24px rgba(45, 111, 240, 0.24);
+      white-space: nowrap;
+    }
+
+    .openBtn:hover {
+      filter: brightness(1.04);
+    }
+
+    .openBtn:active {
+      transform: translateY(1px);
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        border-radius: 0 0 18px 18px;
+      }
+
+      .heroInner {
+        min-height: 160px;
+        padding: 20px 18px;
+      }
+
+      .heroTitle {
+        font-size: 32px;
+      }
+
+      .heroSubtitle {
+        font-size: 15px;
+      }
+
+      .contentCard {
+        padding: 24px 16px 28px;
+        border-radius: 18px 18px 0 0;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .heroInner {
+        padding: 18px;
+        justify-content: flex-start;
+        text-align: left;
+      }
+
+      .heroText {
+        align-items: flex-start;
+      }
+
+      .heroTitle {
+        font-size: 26px;
+      }
+
+      .heroSubtitle {
+        font-size: 14px;
+      }
+
+      .reportItem {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .reportCity {
+        padding-right: 0;
+      }
+
+      .openBtn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="heroInner">
+        <div class="heroText">
+          <h1 class="heroTitle">Relatórios — Flávia Lancha</h1>
+          <div class="heroSubtitle">Quadrify</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="glowLine"></div>
+
+    <section class="contentCard">
+      <h2 class="sectionTitle">Relatórios por município</h2>
+      <div class="sectionLine"></div>
+      <p class="sectionText">
+        Uma linha por cidade. Clique em <strong>Abrir relatório</strong> para abrir o relatório completo em outra aba.
+      </p>
+
+      <div class="reportsList">
+        
+            <div class="reportItem">
+              <div class="reportCity">ARAMINA</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_aramina/relatorio_aramina/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">BATATAIS</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_batatais/relatorio_batatais/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">BEBEDOURO</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_bebedouro/relatorio_bebedouro/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">CRAVINHOS</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_cravinhos/relatorio_cravinhos/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">CRISTAIS PAULISTA</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_cristais_paulista/relatorio_cristais_paulista/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">FRANCA</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_franca/relatorio_franca/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">GUARÁ</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_guara/relatorio_guara/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">IBATÉ</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_ibate/relatorio_ibate/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">IGARAPAVA</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_igarapava/relatorio_igarapava/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">IPUÃ</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_ipua/relatorio_ipua/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">ITUVERAVA</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_ituverava/relatorio_ituverava/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">JABOTICABAL</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_jaboticabal/relatorio_jaboticabal/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">MIGUELÓPOLIS</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_miguelopolis/relatorio_miguelopolis/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">MONTE ALTO</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_monte_alto/relatorio_monte_alto/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">MORRO AGUDO</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_morro_agudo/relatorio_morro_agudo/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">ORLÂNDIA</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_orlandia/relatorio_orlandia/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">PATROCÍNIO PAULISTA</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_patrocinio_paulista/relatorio_patrocinio_paulista/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">PEDREGULHO</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_pedregulho/relatorio_pedregulho/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">PITANGUEIRAS</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_pitangueiras/relatorio_pitangueiras/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">PONTAL</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_pontal/relatorio_pontal/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">PRADÓPOLIS</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_pradopolis/relatorio_pradopolis/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">RESTINGA</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_restinga/relatorio_restinga/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">RIBEIRÃO CORRENTE</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_ribeirao_corrente/relatorio_ribeirao_corrente/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">RIBEIRÃO PRETO</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_ribeirao_preto/relatorio_ribeirao_preto/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">SALES OLIVEIRA</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_sales_oliveira/relatorio_sales_oliveira/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">SANTA ROSA DE VITERBO</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_santa_rosa_de_viterbo/relatorio_santa_rosa_de_viterbo/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">SÃO JOAQUIM DA BARRA</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_sao_joaquim_da_barra/relatorio_sao_joaquim_da_barra/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">SÃO JOSÉ DA BELA VISTA</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_sao_jose_da_bela_vista/relatorio_sao_jose_da_bela_vista/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">SERTÃOZINHO</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_sertaozinho/relatorio_sertaozinho/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+            <div class="reportItem">
+              <div class="reportCity">TAQUARITINGA</div>
+              <a class="openBtn" href="https://quadrifygit.github.io/dataquadri/finais/flavia_lancha/relatorio_taquaritinga/relatorio_taquaritinga/index.html" target="_blank" rel="noopener">Abrir relatório</a>
+            </div>
+            
+      </div>
+    </section>
+  </main>
+</body>
+</html>
