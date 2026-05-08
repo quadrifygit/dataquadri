@@ -307,6 +307,34 @@
     .compact-table th:nth-child(2), .compact-table td:nth-child(2) { width: 18%; }
     .compact-table th:nth-child(3), .compact-table td:nth-child(3) { width: 34%; }
 
+    .map-table-cargo {
+      table-layout: fixed;
+    }
+    .map-table-cargo th:nth-child(1), .map-table-cargo td:nth-child(1) { width: 20%; }
+    .map-table-cargo th:nth-child(2), .map-table-cargo td:nth-child(2) { width: 46%; }
+    .map-table-cargo th:nth-child(3), .map-table-cargo td:nth-child(3) { width: 12%; }
+    .map-table-cargo th:nth-child(4), .map-table-cargo td:nth-child(4) {
+      width: 22%;
+      text-align: center;
+      vertical-align: middle;
+      word-break: normal;
+    }
+    .map-table-cargo .map-cell {
+      text-align: center;
+      vertical-align: middle;
+    }
+    .map-table-cargo .map-btn {
+      width: 118px;
+      min-height: 46px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      line-height: 1.15;
+      white-space: normal;
+      text-align: center;
+      word-break: normal;
+      overflow-wrap: normal;
+    }
+
     .cabos-table th, .cabos-table td {
       font-size: 13px;
       padding: 12px 10px;
@@ -462,7 +490,7 @@
   <div class="report-shell" id="reportShell">
     <nav class="side-nav" aria-label="Navegação do relatório">
       <div class="side-nav-inner">
-        <a href="#pagina1">Capa</a><a href="#pagina3">Síntese completa</a><a href="#pagina4">Map. candidatos</a><a href="#pagina5">Coord. deputados</a><a href="#pagina6">Map. vereadores</a><a href="#pagina7">Coord. vereadores</a><a href="#pagina8">Cabos eleitorais</a><a href="#pagina9">Mapa de controle</a><a href="#pagina10">GPS oportunidades</a><a href="#pagina11">Coord. GPS</a>
+        <a href="#pagina1">Capa</a><a href="#pagina2">Síntese territorial</a><a href="#pagina3">Síntese completa</a><a href="#pagina4">Map. candidatos</a><a href="#pagina5">Coord. deputados</a><a href="#pagina6">Map. vereadores</a><a href="#pagina7">Coord. vereadores</a><a href="#pagina8">Cabos eleitorais</a><a href="#pagina9">Mapa de controle</a><a href="#pagina10">GPS oportunidades</a><a href="#pagina11">Coord. GPS</a>
       </div>
     </nav>
 
@@ -506,6 +534,112 @@
     </div>
   </div>
 </section>
+<section class="page wide" id="pagina2" data-nav="pagina2">
+  <div class="pageHeader">
+    <div class="pageNumber">Página 2</div>
+    <h2 class="pageTitle">Síntese territorial</h2>
+    <div class="pageDesc">Tabela síntese com município, colunas de votação configuráveis e classificação estratégica.</div>
+  </div>
+  
+<div class="table-card wide">
+  <table class="data-table synth-table-dynamic">
+    <thead>
+      <tr>
+        <th>Município</th>
+        <th>Votação 1</th>
+        <th>Classificação estratégica</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+  <td><strong>ARUJÁ</strong></td>
+  <td>-</td>
+  <td>Potencial baixo</td>
+</tr><tr>
+  <td><strong>BIRITIBA MIRIM</strong></td>
+  <td>-</td>
+  <td>Potencial intermediário</td>
+</tr><tr>
+  <td><strong>CACHOEIRA PAULISTA</strong></td>
+  <td>-</td>
+  <td>Potencial baixo</td>
+</tr><tr>
+  <td><strong>FERRAZ DE VASCONCELOS</strong></td>
+  <td>-</td>
+  <td>Potencial intermediário</td>
+</tr><tr>
+  <td><strong>GUARAREMA</strong></td>
+  <td>-</td>
+  <td>Potencial forte</td>
+</tr><tr>
+  <td><strong>GUARATINGUETÁ</strong></td>
+  <td>-</td>
+  <td>Potencial intermediário</td>
+</tr><tr>
+  <td><strong>GUARULHOS</strong></td>
+  <td>-</td>
+  <td>Potencial intermediário</td>
+</tr><tr>
+  <td><strong>ILHABELA</strong></td>
+  <td>-</td>
+  <td>Sem potencial imediato</td>
+</tr><tr>
+  <td><strong>ITAQUAQUECETUBA</strong></td>
+  <td>-</td>
+  <td>Potencial forte</td>
+</tr><tr>
+  <td><strong>JACAREÍ</strong></td>
+  <td>-</td>
+  <td>Potencial baixo</td>
+</tr><tr>
+  <td><strong>LORENA</strong></td>
+  <td>-</td>
+  <td>Potencial intermediário</td>
+</tr><tr>
+  <td><strong>MOGI DAS CRUZES</strong></td>
+  <td>5.089</td>
+  <td>Núcleo principal</td>
+</tr><tr>
+  <td><strong>POÁ</strong></td>
+  <td>-</td>
+  <td>Potencial intermediário</td>
+</tr><tr>
+  <td><strong>SALESÓPOLIS</strong></td>
+  <td>-</td>
+  <td>Potencial baixo</td>
+</tr><tr>
+  <td><strong>SANTA ISABEL</strong></td>
+  <td>-</td>
+  <td>Potencial baixo</td>
+</tr><tr>
+  <td><strong>SANTOS</strong></td>
+  <td>-</td>
+  <td>Potencial intermediário</td>
+</tr><tr>
+  <td><strong>SÃO JOSÉ DOS CAMPOS</strong></td>
+  <td>-</td>
+  <td>Potencial intermediário</td>
+</tr><tr>
+  <td><strong>SÃO PAULO CAPITAL</strong></td>
+  <td>-</td>
+  <td>Potencial intermediário</td>
+</tr><tr>
+  <td><strong>SÃO SEBASTIÃO</strong></td>
+  <td>-</td>
+  <td>Potencial baixo</td>
+</tr><tr>
+  <td><strong>SUZANO</strong></td>
+  <td>-</td>
+  <td>Potencial forte</td>
+</tr><tr>
+  <td><strong>TAUBATÉ</strong></td>
+  <td>-</td>
+  <td>Potencial baixo</td>
+</tr>
+    </tbody>
+  </table>
+</div>
+</section>
 <section class="page narrow" id="pagina3" data-nav="pagina3">
   <div class="pageHeader">
     <div class="pageNumber">Página 3</div>
@@ -518,7 +652,7 @@
     <div class="callout-title">Link disponível para consulta</div>
     <div class="callout-text">Aqui fica o link do Drive ou do material completo consolidado para consulta.</div>
   </div>
-  <a class="action-btn" href="https://docs.google.com/spreadsheets/d/1nAXaM94AC3Q1ZAblOagSA50_JpuU_Re1/edit?usp=drive_link&amp;ouid=114857027147481289571&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">Abrir síntese completa</a>
+  <a class="action-btn" href="https://docs.google.com/spreadsheets/d/1j8eA4IoWq_KYQ7b8NVPpqjHw4hHj4zW_oP7lu0VROE8/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Abrir síntese completa</a>
 </div>
 </section>
 <section class="page narrow" id="pagina4" data-nav="pagina4">
@@ -529,10 +663,10 @@
   </div>
   <div class="group-stack"><details class="city-group">
   <summary>
-    <span class="city-title">Arujá</span>
+    <span class="city-title">ARUJÁ</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Cargo</th>
@@ -544,49 +678,34 @@
       <tbody>
         <tr>
   <td>Deputado Estadual</td>
-  <td>ANA CAROLINA ROSSI BARRETO SERRA</td>
-  <td>577</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_ana_aruja_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>CAIO FRANÇA DE GOUVÊA GOMES</td>
+  <td>247</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_caio_aruja_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Deputado Estadual</td>
-  <td>ANDRE LUIS DO PRADO</td>
-  <td>3.803</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_andre_aruja_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>MARINA MEDEIROS HELOU</td>
+  <td>120</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_marina_aruja_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Deputado Federal</td>
-  <td>CARLA ZAMBELLI SALGADO DE OLIVEIRA</td>
-  <td>1.579</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_carla_aruja_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Estadual</td>
-  <td>GILDEVANIO ILSO DOS SANTOS DINIZ</td>
-  <td>406</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_gildevanio_aruja_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Estadual</td>
-  <td>GILMACI DOS SANTOS BARBOSA</td>
-  <td>855</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_gilmaci_aruja_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Federal</td>
-  <td>MARCO ANTONIO FELICIANO</td>
-  <td>373</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_marco_aruja_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>553</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_aruja_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Governador</td>
-  <td>TARCISIO GOMES DE FREITAS</td>
-  <td>29.112</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_tarcisio_aruja_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>834</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_aruja_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
   </div>
 </details><details class="city-group">
   <summary>
-    <span class="city-title">Biritiba Mirim</span>
+    <span class="city-title">BIRITIBA MIRIM</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Cargo</th>
@@ -597,40 +716,25 @@
       </thead>
       <tbody>
         <tr>
-  <td>Deputado Estadual</td>
-  <td>ANDRE LUIS DO PRADO</td>
-  <td>6.857</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_andre_biritiba_mirim_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
   <td>Deputado Federal</td>
-  <td>CARLA ZAMBELLI SALGADO DE OLIVEIRA</td>
-  <td>305</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_carla_biritiba_mirim_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Estadual</td>
-  <td>GILMACI DOS SANTOS BARBOSA</td>
-  <td>228</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_gilmaci_biritiba_mirim_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Federal</td>
-  <td>MARCO ANTONIO FELICIANO</td>
-  <td>80</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_marco_biritiba_mirim_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>84</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_biritiba_mirim_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Governador</td>
-  <td>TARCISIO GOMES DE FREITAS</td>
-  <td>9.940</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_tarcisio_biritiba_mirim_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>157</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_biritiba_mirim_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
   </div>
 </details><details class="city-group">
   <summary>
-    <span class="city-title">Ferraz de Vasconcelos</span>
+    <span class="city-title">CACHOEIRA PAULISTA</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Cargo</th>
@@ -641,50 +745,30 @@
       </thead>
       <tbody>
         <tr>
-  <td>Deputado Federal</td>
-  <td>CARLA ZAMBELLI SALGADO DE OLIVEIRA</td>
-  <td>1.446</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_carla_ferraz_de_vasconcelos_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
   <td>Deputado Estadual</td>
-  <td>EDNA BEZERRA SAMPAIO FERNANDES</td>
-  <td>442</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_edna_ferraz_de_vasconcelos_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Estadual</td>
-  <td>GILDEVANIO ILSO DOS SANTOS DINIZ</td>
-  <td>377</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_gildevanio_ferraz_de_vasconcelos_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Estadual</td>
-  <td>GILMACI DOS SANTOS BARBOSA</td>
-  <td>1.444</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_gilmaci_ferraz_de_vasconcelos_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>CAIO FRANÇA DE GOUVÊA GOMES</td>
+  <td>245</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_caio_cachoeira_paulista_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Deputado Federal</td>
-  <td>JEFFERSON ALVES DE CAMPOS</td>
-  <td>453</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_jefferson_ferraz_de_vasconcelos_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Federal</td>
-  <td>MARCO ANTONIO FELICIANO</td>
-  <td>718</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_marco_ferraz_de_vasconcelos_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>222</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_cachoeira_paulista_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Governador</td>
-  <td>TARCISIO GOMES DE FREITAS</td>
-  <td>41.181</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_tarcisio_ferraz_de_vasconcelos_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>182</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_cachoeira_paulista_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
   </div>
 </details><details class="city-group">
   <summary>
-    <span class="city-title">Guararema</span>
+    <span class="city-title">FERRAZ DE VASCONCELOS</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Cargo</th>
@@ -696,44 +780,34 @@
       <tbody>
         <tr>
   <td>Deputado Estadual</td>
-  <td>ANDRE LUIS DO PRADO</td>
-  <td>11.754</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_andre_guararema_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>CAIO FRANÇA DE GOUVÊA GOMES</td>
+  <td>451</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_caio_ferraz_de_vasconcelos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Deputado Federal</td>
-  <td>CARLA ZAMBELLI SALGADO DE OLIVEIRA</td>
-  <td>393</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_carla_guararema_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Estadual</td>
-  <td>GILDEVANIO ILSO DOS SANTOS DINIZ</td>
-  <td>80</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_gildevanio_guararema_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>JULIANA CARDOSO</td>
+  <td>1.080</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_juliana_ferraz_de_vasconcelos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Deputado Federal</td>
-  <td>JEFFERSON ALVES DE CAMPOS</td>
-  <td>56</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_jefferson_guararema_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Federal</td>
-  <td>MARCO ANTONIO FELICIANO</td>
-  <td>151</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_marco_guararema_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>477</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_ferraz_de_vasconcelos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Governador</td>
-  <td>TARCISIO GOMES DE FREITAS</td>
-  <td>11.810</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_tarcisio_guararema_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>1.084</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_ferraz_de_vasconcelos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
   </div>
 </details><details class="city-group">
   <summary>
-    <span class="city-title">Itaquaquecetuba</span>
+    <span class="city-title">GUARAREMA</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Cargo</th>
@@ -744,55 +818,30 @@
       </thead>
       <tbody>
         <tr>
-  <td>Deputado Estadual</td>
-  <td>ANDRE LUIS DO PRADO</td>
-  <td>5.748</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_andre_itaquaquecetuba_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>Deputado Federal</td>
+  <td>JULIANA CARDOSO</td>
+  <td>64</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_juliana_guararema_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Deputado Federal</td>
-  <td>CARLA ZAMBELLI SALGADO DE OLIVEIRA</td>
-  <td>3.840</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_carla_itaquaquecetuba_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Estadual</td>
-  <td>EDNA BEZERRA SAMPAIO FERNANDES</td>
-  <td>250</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_edna_itaquaquecetuba_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Estadual</td>
-  <td>GILDEVANIO ILSO DOS SANTOS DINIZ</td>
-  <td>856</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_gildevanio_itaquaquecetuba_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Estadual</td>
-  <td>GILMACI DOS SANTOS BARBOSA</td>
-  <td>3.178</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_gilmaci_itaquaquecetuba_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Federal</td>
-  <td>JEFFERSON ALVES DE CAMPOS</td>
-  <td>403</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_jefferson_itaquaquecetuba_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Federal</td>
-  <td>MARCO ANTONIO FELICIANO</td>
-  <td>2.568</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_marco_itaquaquecetuba_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>136</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_guararema_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Governador</td>
-  <td>TARCISIO GOMES DE FREITAS</td>
-  <td>79.729</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_tarcisio_itaquaquecetuba_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>170</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_guararema_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
   </div>
 </details><details class="city-group">
   <summary>
-    <span class="city-title">Mogi das Cruzes</span>
+    <span class="city-title">GUARATINGUETÁ</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Cargo</th>
@@ -804,49 +853,39 @@
       <tbody>
         <tr>
   <td>Deputado Estadual</td>
-  <td>ANDRE LUIS DO PRADO</td>
-  <td>8.632</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_andre_mogi_das_cruzes_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>CAIO FRANÇA DE GOUVÊA GOMES</td>
+  <td>236</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_caio_guaratingueta_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Deputado Federal</td>
-  <td>CARLA ZAMBELLI SALGADO DE OLIVEIRA</td>
-  <td>5.913</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_carla_mogi_das_cruzes_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>DANIEL JOSÉ DA SILVA OLIVEIRA</td>
+  <td>102</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_daniel_guaratingueta_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Deputado Estadual</td>
-  <td>GILDEVANIO ILSO DOS SANTOS DINIZ</td>
-  <td>1.761</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_gildevanio_mogi_das_cruzes_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Estadual</td>
-  <td>GILMACI DOS SANTOS BARBOSA</td>
-  <td>3.261</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_gilmaci_mogi_das_cruzes_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>MARINA MEDEIROS HELOU</td>
+  <td>106</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_marina_guaratingueta_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Deputado Federal</td>
-  <td>JEFFERSON ALVES DE CAMPOS</td>
-  <td>474</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_jefferson_mogi_das_cruzes_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Federal</td>
-  <td>MARCO ANTONIO FELICIANO</td>
-  <td>1.439</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_marco_mogi_das_cruzes_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>904</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_guaratingueta_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Governador</td>
-  <td>TARCISIO GOMES DE FREITAS</td>
-  <td>129.439</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_tarcisio_mogi_das_cruzes_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>860</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_guaratingueta_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
   </div>
 </details><details class="city-group">
   <summary>
-    <span class="city-title">Poá</span>
+    <span class="city-title">GUARULHOS</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Cargo</th>
@@ -858,54 +897,39 @@
       <tbody>
         <tr>
   <td>Deputado Estadual</td>
-  <td>ANDRE LUIS DO PRADO</td>
-  <td>3.341</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_andre_poa_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>CAIO FRANÇA DE GOUVÊA GOMES</td>
+  <td>1.420</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_caio_guarulhos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Deputado Federal</td>
-  <td>CARLA ZAMBELLI SALGADO DE OLIVEIRA</td>
-  <td>2.014</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_carla_poa_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>JULIANA CARDOSO</td>
+  <td>2.479</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_juliana_guarulhos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Deputado Estadual</td>
-  <td>EDNA BEZERRA SAMPAIO FERNANDES</td>
-  <td>168</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_edna_poa_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Estadual</td>
-  <td>GILDEVANIO ILSO DOS SANTOS DINIZ</td>
-  <td>489</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_gildevanio_poa_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Estadual</td>
-  <td>GILMACI DOS SANTOS BARBOSA</td>
-  <td>830</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_gilmaci_poa_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>MARINA MEDEIROS HELOU</td>
+  <td>978</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_marina_guarulhos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Deputado Federal</td>
-  <td>JEFFERSON ALVES DE CAMPOS</td>
-  <td>152</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_jefferson_poa_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Federal</td>
-  <td>MARCO ANTONIO FELICIANO</td>
-  <td>589</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_marco_poa_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>6.553</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_guarulhos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Governador</td>
-  <td>TARCISIO GOMES DE FREITAS</td>
-  <td>33.747</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_tarcisio_poa_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>10.417</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_guarulhos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
   </div>
 </details><details class="city-group">
   <summary>
-    <span class="city-title">Salesópolis</span>
+    <span class="city-title">ILHABELA</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Cargo</th>
@@ -917,39 +941,34 @@
       <tbody>
         <tr>
   <td>Deputado Estadual</td>
-  <td>ANDRE LUIS DO PRADO</td>
-  <td>3.322</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_andre_salesopolis_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>CAIO FRANÇA DE GOUVÊA GOMES</td>
+  <td>180</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_caio_ilhabela_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Estadual</td>
+  <td>MARINA MEDEIROS HELOU</td>
+  <td>104</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_marina_ilhabela_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Deputado Federal</td>
-  <td>CARLA ZAMBELLI SALGADO DE OLIVEIRA</td>
-  <td>190</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_carla_salesopolis_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Estadual</td>
-  <td>GILDEVANIO ILSO DOS SANTOS DINIZ</td>
-  <td>35</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_gildevanio_salesopolis_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Estadual</td>
-  <td>GILMACI DOS SANTOS BARBOSA</td>
-  <td>99</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_gilmaci_salesopolis_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>342</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_ilhabela_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Governador</td>
-  <td>TARCISIO GOMES DE FREITAS</td>
-  <td>6.646</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_tarcisio_salesopolis_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>258</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_ilhabela_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
   </div>
 </details><details class="city-group">
   <summary>
-    <span class="city-title">Santa Isabel</span>
+    <span class="city-title">ITAQUAQUECETUBA</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Cargo</th>
@@ -960,45 +979,64 @@
       </thead>
       <tbody>
         <tr>
-  <td>Deputado Estadual</td>
-  <td>ANDRE LUIS DO PRADO</td>
-  <td>7.256</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_andre_santa_isabel_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>Deputado Federal</td>
+  <td>JULIANA CARDOSO</td>
+  <td>873</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_juliana_itaquaquecetuba_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Deputado Federal</td>
-  <td>CARLA ZAMBELLI SALGADO DE OLIVEIRA</td>
-  <td>890</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_carla_santa_isabel_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Estadual</td>
-  <td>GILDEVANIO ILSO DOS SANTOS DINIZ</td>
-  <td>169</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_gildevanio_santa_isabel_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Estadual</td>
-  <td>GILMACI DOS SANTOS BARBOSA</td>
-  <td>273</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_gilmaci_santa_isabel_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Federal</td>
-  <td>MARCO ANTONIO FELICIANO</td>
-  <td>216</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_marco_santa_isabel_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>1.415</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_itaquaquecetuba_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Governador</td>
-  <td>TARCISIO GOMES DE FREITAS</td>
-  <td>18.050</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_tarcisio_santa_isabel_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>1.695</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_itaquaquecetuba_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
   </div>
 </details><details class="city-group">
   <summary>
-    <span class="city-title">Suzano</span>
+    <span class="city-title">JACAREÍ</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Cargo</th>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>Deputado Federal</td>
+  <td>JULIANA CARDOSO</td>
+  <td>361</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_juliana_jacarei_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Federal</td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>1.422</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_jacarei_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Governador</td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>2.084</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_jacarei_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">LORENA</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Cargo</th>
@@ -1010,39 +1048,419 @@
       <tbody>
         <tr>
   <td>Deputado Estadual</td>
-  <td>ANDRE LUIS DO PRADO</td>
-  <td>30.870</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_andre_suzano_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>CAIO FRANÇA DE GOUVÊA GOMES</td>
+  <td>463</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_caio_lorena_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Deputado Federal</td>
-  <td>CARLA ZAMBELLI SALGADO DE OLIVEIRA</td>
-  <td>4.305</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_carla_suzano_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Estadual</td>
-  <td>GILDEVANIO ILSO DOS SANTOS DINIZ</td>
-  <td>1.486</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_gildevanio_suzano_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Estadual</td>
-  <td>GILMACI DOS SANTOS BARBOSA</td>
-  <td>2.641</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_gilmaci_suzano_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>JULIANA CARDOSO</td>
+  <td>92</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_juliana_lorena_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Deputado Federal</td>
-  <td>JEFFERSON ALVES DE CAMPOS</td>
-  <td>389</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_jefferson_suzano_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>Deputado Federal</td>
-  <td>MARCO ANTONIO FELICIANO</td>
-  <td>1.893</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_marco_suzano_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>552</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_lorena_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>Governador</td>
-  <td>TARCISIO GOMES DE FREITAS</td>
-  <td>84.117</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_tarcisio_suzano_sp_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>597</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_lorena_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">MOGI DAS CRUZES</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Cargo</th>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>Deputado Federal</td>
+  <td>DANIEL JOSÉ DA SILVA OLIVEIRA</td>
+  <td>153</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_daniel_mogi_das_cruzes_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Federal</td>
+  <td>JULIANA CARDOSO</td>
+  <td>604</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_juliana_mogi_das_cruzes_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Estadual</td>
+  <td>MARINA MEDEIROS HELOU</td>
+  <td>458</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_marina_mogi_das_cruzes_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Federal</td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>2.716</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_mogi_das_cruzes_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Governador</td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>4.054</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_mogi_das_cruzes_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">POÁ</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Cargo</th>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>Deputado Estadual</td>
+  <td>CAIO FRANÇA DE GOUVÊA GOMES</td>
+  <td>136</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_caio_poa_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Federal</td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>623</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_poa_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Governador</td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>1.049</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_poa_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">SALESÓPOLIS</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Cargo</th>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>Deputado Federal</td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>81</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_salesopolis_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Governador</td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>95</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_salesopolis_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">SANTA ISABEL</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Cargo</th>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>Deputado Federal</td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>587</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_santa_isabel_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Governador</td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>283</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_santa_isabel_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">SANTOS</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Cargo</th>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>Deputado Estadual</td>
+  <td>CAIO FRANÇA DE GOUVÊA GOMES</td>
+  <td>8.275</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_caio_santos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Estadual</td>
+  <td>MARINA MEDEIROS HELOU</td>
+  <td>761</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_marina_santos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Federal</td>
+  <td>ROSANA DE OLIVEIRA VALLE</td>
+  <td>56.704</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_rosana_santos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Federal</td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>3.134</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_santos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Governador</td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>5.132</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_santos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">SÃO JOSÉ DOS CAMPOS</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Cargo</th>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>Deputado Estadual</td>
+  <td>CAIO FRANÇA DE GOUVÊA GOMES</td>
+  <td>288</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_caio_sao_jose_dos_campos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Federal</td>
+  <td>DANIEL JOSÉ DA SILVA OLIVEIRA</td>
+  <td>401</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_daniel_sao_jose_dos_campos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Federal</td>
+  <td>JULIANA CARDOSO</td>
+  <td>371</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_juliana_sao_jose_dos_campos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Estadual</td>
+  <td>MARINA MEDEIROS HELOU</td>
+  <td>1.082</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_marina_sao_jose_dos_campos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Federal</td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>5.594</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_sao_jose_dos_campos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Governador</td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>8.007</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_sao_jose_dos_campos_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">SÃO PAULO</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Cargo</th>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>Deputado Estadual</td>
+  <td>CAIO FRANÇA DE GOUVÊA GOMES</td>
+  <td>8.660</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_caio_sao_paulo_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Federal</td>
+  <td>DANIEL JOSÉ DA SILVA OLIVEIRA</td>
+  <td>16.481</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_daniel_sao_paulo_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Federal</td>
+  <td>JULIANA CARDOSO</td>
+  <td>82.393</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_juliana_sao_paulo_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Estadual</td>
+  <td>MARINA MEDEIROS HELOU</td>
+  <td>53.537</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_marina_sao_paulo_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Federal</td>
+  <td>ROSANA DE OLIVEIRA VALLE</td>
+  <td>4.249</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_rosana_sao_paulo_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Federal</td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>143.266</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_sao_paulo_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Governador</td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>148.421</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_sao_paulo_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">SÃO SEBASTIÃO</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Cargo</th>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>Deputado Estadual</td>
+  <td>CAIO FRANÇA DE GOUVÊA GOMES</td>
+  <td>1.175</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_caio_sao_sebastiao_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Estadual</td>
+  <td>MARINA MEDEIROS HELOU</td>
+  <td>331</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_marina_sao_sebastiao_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Federal</td>
+  <td>ROSANA DE OLIVEIRA VALLE</td>
+  <td>139</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_rosana_sao_sebastiao_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Federal</td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>547</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_sao_sebastiao_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Governador</td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>422</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_sao_sebastiao_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">SUZANO</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Cargo</th>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>Deputado Estadual</td>
+  <td>CAIO FRANÇA DE GOUVÊA GOMES</td>
+  <td>303</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_caio_suzano_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Federal</td>
+  <td>JULIANA CARDOSO</td>
+  <td>427</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_juliana_suzano_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Deputado Federal</td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>1.810</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_suzano_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Governador</td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>2.097</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_suzano_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">TAUBATÉ</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Cargo</th>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>Deputado Federal</td>
+  <td>TABATA CLAUDIA AMARAL DE PONTES</td>
+  <td>1.184</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_tabata_taubate_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>Governador</td>
+  <td>VINICIUS LAZZER POIT</td>
+  <td>3.371</td>
+  <td class="map-cell"><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_vinicius_taubate_2022.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
@@ -1061,7 +1479,7 @@
     <div class="callout-title">Link disponível para consulta</div>
     <div class="callout-text">Abra aqui a planilha ou o Drive com coordenadas, códigos e materiais relativos aos deputados mapeados.</div>
   </div>
-  <a class="action-btn" href="https://drive.google.com/drive/folders/1EH47bIAgq-HzXdJgFHGCOV_eDyn1eWsa?usp=drive_link" target="_blank" rel="noopener noreferrer">Abrir planilha de coordenadas</a>
+  <a class="action-btn" href="https://drive.google.com/drive/folders/1Tw3dDbd1HjtLqxGm76br0cgC_el64TTY?usp=sharing" target="_blank" rel="noopener noreferrer">Abrir planilha de coordenadas</a>
 </div>
 </section>
 <section class="page narrow" id="pagina6" data-nav="pagina6">
@@ -1072,10 +1490,10 @@
   </div>
   <div class="group-stack"><details class="city-group">
   <summary>
-    <span class="city-title">Arujá</span>
+    <span class="city-title">ARUJÁ</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Nome</th>
@@ -1087,33 +1505,29 @@
         <tr>
   <td>CRISTIANE ARAUJO PEDRO DE OLIVEIRA</td>
   <td>976</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_cristiane_aruja_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_cristiane_araujo_pedro_de_oliveira_aruja_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
-  <td>DIVINEI DA SILVA</td>
-  <td>1.379</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_divinei_aruja_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>LEANDRO FRANCO LARINI</td>
-  <td>1.420</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_leandro_aruja_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>SAMOEL MAIA DE OLIVEIRA</td>
-  <td>815</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_samoel_aruja_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>DANILO DA SILVA SANTOS</td>
+  <td>2.083</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_danilo_da_silva_santos_aruja_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>TIAGO SOUZA SANTANA</td>
   <td>816</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_tiago_aruja_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_tiago_souza_santana_aruja_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>UELTON DE SOUZA ALMEIDA</td>
+  <td>1.891</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_uelton_de_souza_almeida_aruja_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
   </div>
 </details><details class="city-group">
   <summary>
-    <span class="city-title">Biritiba Mirim</span>
+    <span class="city-title">BIRITIBA MIRIM</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Nome</th>
@@ -1123,23 +1537,31 @@
       </thead>
       <tbody>
         <tr>
+  <td>ADAUTO CARDOSO DOS SANTOS</td>
+  <td>551</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_adauto_cardoso_dos_santos_biritiba_mirim_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>CLEITON DA COSTA VIANA</td>
+  <td>244</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_cleiton_da_costa_viana_biritiba_mirim_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
   <td>LUCILÉIA DAMASCENA SANTOS</td>
   <td>475</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_lucileia_biritiba_mirim_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_lucileia_damascena_santos_biritiba_mirim_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>THÁIS BARROS MOLINA</td>
   <td>518</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_thais_biritiba_mirim_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_thais_barros_molina_biritiba_mirim_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
   </div>
 </details><details class="city-group">
   <summary>
-    <span class="city-title">Ferraz de Vasconcelos</span>
+    <span class="city-title">CACHOEIRA PAULISTA</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Nome</th>
@@ -1149,31 +1571,53 @@
       </thead>
       <tbody>
         <tr>
-  <td>DIEGO PINHEIRO DE OLIVEIRA</td>
-  <td>2.277</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_diego_ferraz_de_vasconcelos_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>JOSÉ RUI LEITE AZEVEDO HUMMEL MENDONÇA</td>
+  <td>374</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_jose_rui_leite_azevedo_hummel_mendonca_cachoeira_paulista_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
-  <td>ELIEL DE SOUZA</td>
-  <td>2.035</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_eliel_ferraz_de_vasconcelos_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>RENATO RAMOS DE SOUZA</td>
-  <td>2.124</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_renato_ferraz_de_vasconcelos_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>SELMA FRANCISCA DOS SANTOS</td>
-  <td>1.189</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_selma_ferraz_de_vasconcelos_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>THÁLITHA MICHELLE DOS SANTOS ESTEVAM BARBOZA</td>
+  <td>479</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_thalitha_michelle_dos_santos_estevam_barboza_cachoeira_paulista_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
   </div>
 </details><details class="city-group">
   <summary>
-    <span class="city-title">Guararema</span>
+    <span class="city-title">FERRAZ DE VASCONCELOS</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>ALEXANDRO SANTOS ALVES SILVA</td>
+  <td>1.894</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_alexandro_santos_alves_silva_ferraz_de_vasconcelos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>CLAUDIO RAMOS MOREIRA</td>
+  <td>1.813</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_claudio_ramos_moreira_ferraz_de_vasconcelos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>ELIEL DE SOUZA</td>
+  <td>2.035</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_eliel_de_souza_ferraz_de_vasconcelos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">GUARAREMA</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Nome</th>
@@ -1185,29 +1629,135 @@
         <tr>
   <td>ANDRÉ APARECIDO ALVES DE ARAUJO</td>
   <td>714</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_andre_guararema_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_andre_aparecido_alves_de_araujo_guararema_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
-  <td>CLAUDINEI SANTOS DE OLIVEIRA</td>
-  <td>1.896</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_claudinei_guararema_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>IRINEU CLÁUDIO LEITE</td>
+  <td>1.086</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_irineu_claudio_leite_guararema_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
-  <td>EDUARDO APARECIDO MOREIRA FRANCO</td>
-  <td>919</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_eduardo_guararema_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>MARIA DE FATIMA SOARES PEREIRA DE SOUZA</td>
+  <td>718</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_maria_de_fatima_soares_pereira_de_souza_guararema_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
-  <td>JOSÉ FRANCISCO DA FONSECA</td>
-  <td>581</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_jose_guararema_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>VANESSA MARTINS DOS SANTOS</td>
+  <td>725</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_vanessa_martins_dos_santos_guararema_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
   </div>
 </details><details class="city-group">
   <summary>
-    <span class="city-title">Itaquaquecetuba</span>
+    <span class="city-title">GUARATINGUETÁ</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>MARCELO AUGUSTO DE ASSIS</td>
+  <td>1.868</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_marcelo_augusto_de_assis_guaratingueta_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>PAULO DOS SANTOS</td>
+  <td>262</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_paulo_dos_santos_guaratingueta_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>SAMUEL VITOR PEREIRA BERNARDI</td>
+  <td>3.843</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_samuel_vitor_pereira_bernardi_guaratingueta_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">GUARULHOS</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>ANDRE ALVES AMORIM</td>
+  <td>9.329</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_andre_alves_amorim_guarulhos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>CARLINDA MARIA ARAUJO TINOCO</td>
+  <td>7.161</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_carlinda_maria_araujo_tinoco_guarulhos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>CARLOS CARVALHO LOPES</td>
+  <td>8.393</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_carlos_carvalho_lopes_guarulhos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>DANIEL JOSE DOS SANTOS</td>
+  <td>4.449</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_daniel_jose_dos_santos_guarulhos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>FERNANDA STEFANI CURTI</td>
+  <td>9.236</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_fernanda_stefani_curti_guarulhos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>KARINA CELESTE MOURA PIRES</td>
+  <td>9.780</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_karina_celeste_moura_pires_guarulhos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>RAFAEL APARECIDO CARLOS ACOSTA</td>
+  <td>8.619</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_rafael_aparecido_carlos_acosta_guarulhos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>ROMULO ORNELAS DE OLIVEIRA</td>
+  <td>7.740</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_romulo_ornelas_de_oliveira_guarulhos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">ILHABELA</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>EDILSON CESAR DOS SANTOS</td>
+  <td>616</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_edilson_cesar_dos_santos_ilhabela_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>GABRIEL AUGUSTO DE OLIVEIRA SOUZA ROCHA</td>
+  <td>796</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_gabriel_augusto_de_oliveira_souza_rocha_ilhabela_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">ITAQUAQUECETUBA</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Nome</th>
@@ -1219,33 +1769,33 @@
         <tr>
   <td>DAVID RIBEIRO DA SILVA</td>
   <td>8.762</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_david_itaquaquecetuba_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_david_ribeiro_da_silva_itaquaquecetuba_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
-  <td>FRANCISCO JOSE FERREIRA</td>
-  <td>2.150</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_francisco_itaquaquecetuba_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>GUSTAVO RAMOS DE MACEDO</td>
+  <td>1.361</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_gustavo_ramos_de_macedo_itaquaquecetuba_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>LESSANDRA GONÇALVES</td>
   <td>4.509</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_lessandra_itaquaquecetuba_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_lessandra_goncalves_itaquaquecetuba_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
-  <td>LUIZ CARLOS DE PAULA COUTINHO</td>
-  <td>2.286</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_luiz_itaquaquecetuba_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>MARIA CRISTINA PERPÉTUO DOS SANTOS SOARES</td>
+  <td>3.639</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_maria_cristina_perpetuo_dos_santos_soares_itaquaquecetuba_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
-  <td>SIDNEY GALVÃO DOS SANTOS</td>
-  <td>3.829</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_sidney_itaquaquecetuba_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>ROMUALDO VALDIR DA SILVA</td>
+  <td>2.058</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_romualdo_valdir_da_silva_itaquaquecetuba_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
   </div>
 </details><details class="city-group">
   <summary>
-    <span class="city-title">Mogi das Cruzes</span>
+    <span class="city-title">JACAREÍ</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Nome</th>
@@ -1255,39 +1805,99 @@
       </thead>
       <tbody>
         <tr>
-  <td>EDUARDO HIROSHI OTA</td>
-  <td>3.030</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_eduardo_mogi_das_cruzes_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>DANIEL MARIANO TEIXEIRA</td>
+  <td>2.508</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_daniel_mariano_teixeira_jacarei_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>GABRIEL BELEM DOS SANTOS</td>
+  <td>3.478</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_gabriel_belem_dos_santos_jacarei_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>MARIA AMÉLIA MACHADO MARCONDES DE OLIVEIRA</td>
+  <td>2.273</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_maria_amelia_machado_marcondes_de_oliveira_jacarei_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>PAULO LUÍS SANTOS</td>
+  <td>1.952</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_paulo_luis_santos_jacarei_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">LORENA</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>BRUNO LORENA NOGUEIRA DA SILVA</td>
+  <td>1.288</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_bruno_lorena_nogueira_da_silva_lorena_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>ELIDA DO AMARAL VIEIRA</td>
+  <td>1.403</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_elida_do_amaral_vieira_lorena_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">MOGI DAS CRUZES</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>CAIO CÉSAR MACHADO DA CUNHA</td>
+  <td>69.065</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_deputados/malu_deputados_caio_mogi_das_cruzes_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>FELIPE AUGUSTO TEDESCHI LINTZ</td>
   <td>4.322</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_felipe_mogi_das_cruzes_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_felipe_augusto_tedeschi_lintz_mogi_das_cruzes_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
-  <td>FERNANDA MORENO DA SILVA</td>
-  <td>3.407</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_fernanda_mogi_das_cruzes_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>INÊS PAZ</td>
+  <td>3.622</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_ines_paz_mogi_das_cruzes_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>JULIANO MALAQUIAS BOTELHO</td>
+  <td>2.498</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_juliano_malaquias_botelho_mogi_das_cruzes_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>MARCOS PAULO TAVARES FURLAN</td>
+  <td>3.126</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_marcos_paulo_tavares_furlan_mogi_das_cruzes_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>MARIA LUIZA FERNANDES</td>
   <td>5.089</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_maria_mogi_das_cruzes_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>MILTON LINS DA SILVA</td>
-  <td>3.712</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_milton_mogi_das_cruzes_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>OSVALDO ANTONIO DA SILVA</td>
-  <td>2.762</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_osvaldo_mogi_das_cruzes_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_maria_luiza_fernandes_mogi_das_cruzes_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
   </div>
 </details><details class="city-group">
   <summary>
-    <span class="city-title">Poá</span>
+    <span class="city-title">POÁ</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Nome</th>
@@ -1297,35 +1907,35 @@
       </thead>
       <tbody>
         <tr>
-  <td>FABIO CAMILO BATISTA</td>
-  <td>1.336</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_fabio_poa_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>GIANCARLO LOPES DA SILVA</td>
-  <td>1.341</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_giancarlo_poa_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>EMERSON AMORIM CASSIANO DOS SANTOS</td>
+  <td>1.646</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_emerson_amorim_cassiano_dos_santos_poa_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>LUCAS ALVES FERRARI</td>
   <td>2.220</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_lucas_poa_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_lucas_alves_ferrari_poa_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>RAPHAEL BERNARDES GROTHE</td>
+  <td>1.131</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_raphael_bernardes_grothe_poa_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>ROGERIO RODRIGUES MATHIAS</td>
   <td>1.284</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_rogerio_poa_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_rogerio_rodrigues_mathias_poa_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>SAULO TEIXEIRA ALBERTO DA COSTA</td>
   <td>1.254</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_saulo_poa_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_saulo_teixeira_alberto_da_costa_poa_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
   </div>
 </details><details class="city-group">
   <summary>
-    <span class="city-title">Salesópolis</span>
+    <span class="city-title">SALESÓPOLIS</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Nome</th>
@@ -1337,21 +1947,21 @@
         <tr>
   <td>DEBORA APARECIDA RODRIGUES BORGES</td>
   <td>418</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_debora_salesopolis_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_debora_aparecida_rodrigues_borges_salesopolis_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
-  <td>MICHAEL SILVA SANTOS</td>
-  <td>325</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_michael_salesopolis_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>LOURENÇO FRANCISCO DE OLIVEIRA JUNIOR</td>
+  <td>786</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_lourenco_francisco_de_oliveira_junior_salesopolis_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
   </div>
 </details><details class="city-group">
   <summary>
-    <span class="city-title">Santa Isabel</span>
+    <span class="city-title">SANTA ISABEL</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Nome</th>
@@ -1363,25 +1973,29 @@
         <tr>
   <td>BRUNA RAFAELA MENDES</td>
   <td>1.249</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_bruna_santa_isabel_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_bruna_rafaela_mendes_santa_isabel_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>CRISTIANO FELIZARDO DA SILVEIRA</td>
+  <td>588</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_cristiano_felizardo_da_silveira_santa_isabel_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>JAIRO FURINI NETO</td>
+  <td>414</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_jairo_furini_neto_santa_isabel_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
   <td>MARIA TELMA ALMEIDA FERREIRA PEREIRA</td>
   <td>673</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_maria_santa_isabel_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
-</tr><tr>
-  <td>OSVALDO PIMENTA DE ALMEIDA JUNIOR</td>
-  <td>650</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_osvaldo_santa_isabel_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_maria_telma_almeida_ferreira_pereira_santa_isabel_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
   </div>
 </details><details class="city-group">
   <summary>
-    <span class="city-title">Suzano</span>
+    <span class="city-title">SANTOS</span>
   </summary>
   <div class="city-content">
-    <table class="data-table compact-table">
+    <table class="data-table compact-table map-table-cargo">
       <thead>
         <tr>
           <th>Nome</th>
@@ -1391,21 +2005,211 @@
       </thead>
       <tbody>
         <tr>
+  <td>ADILSON DOS SANTOS JUNIOR</td>
+  <td>3.732</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_adilson_dos_santos_junior_santos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>DÉBORA ALVES CAMILO</td>
+  <td>8.016</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_debora_alves_camilo_santos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>FABRÍCIO CARDOSO DE OLIVEIRA</td>
+  <td>6.106</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_fabricio_cardoso_de_oliveira_santos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>LINCOLN APARECIDO SOARES DOS REIS</td>
+  <td>4.042</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_lincoln_aparecido_soares_dos_reis_santos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>RENATA COSTA BRAVO OLIVEIRA</td>
+  <td>4.359</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_renata_costa_bravo_oliveira_santos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">SÃO JOSÉ DOS CAMPOS</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>AMELIA NAOMI OMURA</td>
+  <td>8.679</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_amelia_naomi_omura_sao_jose_dos_campos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>CARLOS AUGUSTO ABRANCHES</td>
+  <td>5.852</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_carlos_augusto_abranches_sao_jose_dos_campos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>JULIANA FRAGA E SILVA DE SOUZA</td>
+  <td>5.937</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_juliana_fraga_e_silva_de_souza_sao_jose_dos_campos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>RAFAEL AFONSO PASCUCCI</td>
+  <td>5.801</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_rafael_afonso_pascucci_sao_jose_dos_campos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>THOMAZ HENRIQUE BARBOSA DA SILVA</td>
+  <td>8.221</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_thomaz_henrique_barbosa_da_silva_sao_jose_dos_campos_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">SÃO PAULO</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>AMANDA MARQUES PASCHOAL</td>
+  <td>108.654</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_amanda_marques_paschoal_sao_paulo_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>AMANDA VETTORAZZO CARNEIRO</td>
+  <td>40.144</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_amanda_vettorazzo_carneiro_sao_paulo_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>ANA CAROLINA CUNHA DE OLIVEIRA FRANCOMANO</td>
+  <td>129.563</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_ana_carolina_cunha_de_oliveira_francomano_sao_paulo_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>CRISTINA PEREIRA MONTEIRO</td>
+  <td>56.904</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_cristina_pereira_monteiro_sao_paulo_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>LUANA DOS SANTOS ALVES SILVA</td>
+  <td>83.262</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_luana_dos_santos_alves_silva_sao_paulo_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>LUNA ZARATTINI BRANDÃO</td>
+  <td>100.921</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_luna_zarattini_brandao_sao_paulo_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>MARINA AMADEU BATISTA BRAGANTE</td>
+  <td>39.147</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_marina_amadeu_batista_bragante_sao_paulo_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>ZOE MARIA FERNANDEZ MARTINEZ</td>
+  <td>60.272</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_zoe_maria_fernandez_martinez_sao_paulo_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">SÃO SEBASTIÃO</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>ALEX DAMASCENO REIS FRAMBA</td>
+  <td>1.604</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_alex_damasceno_reis_framba_sao_sebastiao_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>ANTONINO CARLOS SOARES</td>
+  <td>2.144</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_antonino_carlos_soares_sao_sebastiao_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>HENRIANA PESSUTO CANDIDO LACERDA</td>
+  <td>1.371</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_henriana_pessuto_candido_lacerda_sao_sebastiao_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">SUZANO</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>ADILSON DE LIMA FRANCO</td>
+  <td>2.337</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_adilson_de_lima_franco_suzano_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>ANDRÉ DIAS DOURADO</td>
+  <td>1.857</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_andre_dias_dourado_suzano_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
   <td>ARTUR YUKIO TAKAYAMA</td>
   <td>3.773</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_artur_suzano_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_artur_yukio_takayama_suzano_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
-  <td>EDIRLEI JUNIO REIS</td>
-  <td>2.629</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_edirlei_suzano_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>ROGERIO APARECIDO CASTILHO</td>
+  <td>3.311</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_rogerio_aparecido_castilho_suzano_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</details><details class="city-group">
+  <summary>
+    <span class="city-title">TAUBATÉ</span>
+  </summary>
+  <div class="city-content">
+    <table class="data-table compact-table map-table-cargo">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Votos</th>
+          <th>Mapa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>ARIEL PEREIRA KATZ</td>
+  <td>2.930</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_ariel_pereira_katz_taubate_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
-  <td>LEANDRO ALVES DE FARIA</td>
-  <td>8.138</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_leandro_suzano_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>MOISES LUCIANO PEREIRA DOS SANTOS</td>
+  <td>4.273</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_moises_luciano_pereira_dos_santos_taubate_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr><tr>
-  <td>MAX ELENO BENEDITO</td>
-  <td>2.709</td>
-  <td><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_max_suzano_sp_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+  <td>NICOLA DI ANGELIS NETO</td>
+  <td>1.656</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_nicola_di_angelis_neto_taubate_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
+</tr><tr>
+  <td>RICHARDSON RAMOS DE SOUSA</td>
+  <td>2.201</td>
+  <td><a class="action-btn small" href="https://quadrifysa.github.io/mapasquadrify/mapas-gerados/malu_fernandes/malu_fernandes_richardson_ramos_de_sousa_taubate_2024.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></td>
 </tr>
       </tbody>
     </table>
@@ -1424,7 +2228,7 @@
     <div class="callout-title">Link disponível para consulta</div>
     <div class="callout-text">Abra aqui a planilha ou o Drive com coordenadas, códigos e materiais relativos aos vereadores mapeados.</div>
   </div>
-  <a class="action-btn" href="https://drive.google.com/drive/folders/1Gt4pEWZi3_lazw7B2alk-pMJbbVLQaVh?usp=drive_link" target="_blank" rel="noopener noreferrer">Abrir planilha de coordenadas</a>
+  <a class="action-btn" href="https://docs.google.com/spreadsheets/d/1ChOPboLpHmgugvLrVeRemi6LiREJLjZ7geBllHdOkzI/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Abrir planilha de coordenadas</a>
 </div>
 </section>
 <section class="page narrow" id="pagina8" data-nav="pagina8">
@@ -1565,31 +2369,31 @@
         <tr>
   <td>ANDRÉ APARECIDO ALVES DE ARAUJO</td>
   <td>PL</td>
-  <td>1000</td>
-  <td>JESSICA CLARITA ALVES DIAS</td>
-  <td>(11) 97143-0105</td>
-  <td>(11) 94164-2320</td>
+  <td>1500</td>
+  <td>DANIELA DE FREITAS</td>
+  <td>(11) 94975-5755</td>
+  <td>(11) 4695-1378</td>
 </tr><tr>
-  <td>ANDRÉ APARECIDO ALVES DE ARAUJO</td>
+  <td>ANTONIO CARLOS DELGADO</td>
   <td>PL</td>
   <td>1000</td>
-  <td>MARINES TEODORA DOS SANTOS SILVA</td>
-  <td>(11) 99805-1869</td>
-  <td>(11) 96189-7842</td>
+  <td>ANA CAROLINA DE PAULA</td>
+  <td>(11) 94243-9679</td>
+  <td>(11) 4693-4704</td>
 </tr><tr>
-  <td>CLAUDINEI SANTOS DE OLIVEIRA</td>
+  <td>ANTONIO CARLOS DELGADO</td>
+  <td>PL</td>
+  <td>1500</td>
+  <td>FERNANDO CARDOSO</td>
+  <td>(11) 98225-7757</td>
+  <td>(11) 95320-8357</td>
+</tr><tr>
+  <td>ELIAS PEREIRA DE SOUSA</td>
   <td>PL</td>
   <td>1000</td>
-  <td>FABIANA CORDEIRO</td>
-  <td>(11) 94204-4082</td>
-  <td>(11) 97580-9334</td>
-</tr><tr>
-  <td>CLAUDINEI SANTOS DE OLIVEIRA</td>
-  <td>PL</td>
-  <td>1000</td>
-  <td>SILVANA SANTOS DE LIMA</td>
-  <td>(11) 93414-6370</td>
-  <td>(11) 95659-7955</td>
+  <td>MARCELO DA SILVA SANTOS</td>
+  <td>(11) 95265-7994</td>
+  <td>(11) 4693-3877</td>
 </tr>
       </tbody>
     </table>
@@ -1612,47 +2416,82 @@
       </thead>
       <tbody>
         <tr>
-  <td>LAERTE VANDERLEY CORNELIO</td>
-  <td>PODE</td>
+  <td>CLEITON DE OLIVEIRA</td>
+  <td>PL</td>
   <td>1500</td>
-  <td>CRISTIANE MARIA DA SILVA</td>
-  <td>(11) 98272-1468</td>
-  <td>(11) 97994-1334</td>
+  <td>ADRIANA MARIA DE JESUS LIMA</td>
+  <td>(11) 96466-8862</td>
+  <td>(11) 4640-1207</td>
 </tr><tr>
-  <td>LAERTE VANDERLEY CORNELIO</td>
-  <td>PODE</td>
+  <td>DAVID RIBEIRO DA SILVA</td>
+  <td>PL</td>
   <td>1000</td>
-  <td>JOVANIO RODRIGUES MOTA</td>
-  <td>(11) 95474-3934</td>
-  <td>(11) 99821-5326</td>
+  <td>ADRIANA LOPES DE SOUZA</td>
+  <td>(11) 98340-8361</td>
+  <td>(11) 4647-4884</td>
 </tr><tr>
-  <td>LAERTE VANDERLEY CORNELIO</td>
-  <td>PODE</td>
+  <td>DAVID RIBEIRO DA SILVA</td>
+  <td>PL</td>
   <td>1500</td>
-  <td>QUITÉRIA DA SILVA NERY</td>
-  <td>(11) 94420-4655</td>
-  <td>(11) 94210-6281</td>
+  <td>ELIZETE DOS SANTOS</td>
+  <td>(11) 94018-3464</td>
+  <td>(11) 4647-0027</td>
 </tr><tr>
-  <td>LAERTE VANDERLEY CORNELIO</td>
-  <td>PODE</td>
+  <td>DAVID RIBEIRO DA SILVA</td>
+  <td>PL</td>
+  <td>1500</td>
+  <td>NATALIA CRISTINA DO NASCIMENTO</td>
+  <td>(11) 95429-6501</td>
+  <td>(11) 4753-2026</td>
+</tr><tr>
+  <td>DAVID RIBEIRO DA SILVA</td>
+  <td>PL</td>
   <td>1000</td>
-  <td>ROMILDO SILVA SOUZA</td>
-  <td>(11) 99348-3105</td>
-  <td>(11) 95404-0550</td>
+  <td>ROBSON ANTONIO DA SILVA</td>
+  <td>(11) 95870-6446</td>
+  <td>(11) 4647-4586</td>
 </tr><tr>
-  <td>SANDRA RIBEIRO</td>
-  <td>PODE</td>
-  <td>2000</td>
-  <td>GRAZIELE LOPES DA SILVA</td>
-  <td>(11) 98412-3269</td>
-  <td>-</td>
+  <td>JOSE CARLOS PEREIRA DOS SANTOS</td>
+  <td>PL</td>
+  <td>1500</td>
+  <td>JULIA CRISTINA DA SILVA</td>
+  <td>(11) 95504-5011</td>
+  <td>(11) 4754-1435</td>
 </tr><tr>
-  <td>SANDRA RIBEIRO</td>
-  <td>PODE</td>
+  <td>MARIA CRISTINA PERPÉTUO DOS SANTOS SOARES</td>
+  <td>PL</td>
   <td>1000</td>
-  <td>JOSELITO OLIVEIRA SILVA JUNIOR</td>
-  <td>(11) 95464-8581</td>
-  <td>(11) 95430-9942</td>
+  <td>ANA PAULA FERREIRA DE SOUZA</td>
+  <td>(11) 96493-3048</td>
+  <td>(11) 4648-0805</td>
+</tr><tr>
+  <td>MARIA CRISTINA PERPÉTUO DOS SANTOS SOARES</td>
+  <td>PL</td>
+  <td>1000</td>
+  <td>CRISTIANE ALMEIDA DA SILVA</td>
+  <td>(11) 94583-1998</td>
+  <td>(11) 4647-7144</td>
+</tr><tr>
+  <td>MARIA CRISTINA PERPÉTUO DOS SANTOS SOARES</td>
+  <td>PL</td>
+  <td>1000</td>
+  <td>JOÃO BATISTA DA SILVA</td>
+  <td>(11) 94955-5321</td>
+  <td>(11) 4640-5080</td>
+</tr><tr>
+  <td>MARIA CRISTINA PERPÉTUO DOS SANTOS SOARES</td>
+  <td>PL</td>
+  <td>1000</td>
+  <td>ROSANA DE SOUZA</td>
+  <td>(11) 95828-7569</td>
+  <td>(11) 4642-1432</td>
+</tr><tr>
+  <td>OSVALDO ALVES DOS SANTOS</td>
+  <td>PL</td>
+  <td>1000</td>
+  <td>JULIANA PEREIRA SANTOS</td>
+  <td>(11) 94658-7762</td>
+  <td>(11) 4753-9917</td>
 </tr>
       </tbody>
     </table>
@@ -1675,61 +2514,61 @@
       </thead>
       <tbody>
         <tr>
-  <td>LAERCIO DE SIQUEIRA NUNES</td>
-  <td>PSD</td>
-  <td>1200</td>
-  <td>EDUARDO LEITE</td>
-  <td>(11) 95025-2449</td>
-  <td>(11) 99669-4538</td>
-</tr><tr>
-  <td>LAERCIO DE SIQUEIRA NUNES</td>
-  <td>PSD</td>
-  <td>1200</td>
-  <td>MARGARETE RODRIGUES MARTINS JULIÃO</td>
-  <td>(11) 94361-3294</td>
-  <td>(11) 97453-7556</td>
-</tr><tr>
-  <td>LAERCIO DE SIQUEIRA NUNES</td>
-  <td>PSD</td>
-  <td>2000</td>
-  <td>MARIZA DE OLIVEIRA LOBO GUSMÃO</td>
-  <td>(11) 99419-9487</td>
-  <td>(11) 96379-3773</td>
-</tr><tr>
-  <td>LAERCIO DE SIQUEIRA NUNES</td>
-  <td>PSD</td>
-  <td>1200</td>
-  <td>PAULO GOUVEA</td>
-  <td>(11) 97140-2639</td>
-  <td>(11) 4724-4358</td>
-</tr><tr>
-  <td>LAERCIO DE SIQUEIRA NUNES</td>
-  <td>PSD</td>
-  <td>1200</td>
-  <td>SONIA REGINA NICOLAU MARIA</td>
-  <td>(11) 96235-4181</td>
-  <td>(11) 97561-7089</td>
-</tr><tr>
-  <td>LAERCIO DE SIQUEIRA NUNES</td>
-  <td>PSD</td>
-  <td>1200</td>
-  <td>VERONICA RODRIGUES JULIÃO</td>
-  <td>(11) 96373-6448</td>
-  <td>(11) 96373-0838</td>
-</tr><tr>
-  <td>MILTON LINS DA SILVA</td>
-  <td>PSD</td>
+  <td>FELIPE AUGUSTO TEDESCHI LINTZ</td>
+  <td>PL</td>
   <td>1500</td>
-  <td>ERICA APARECIDA LOPES SIMÕES</td>
-  <td>(11) 96176-3225</td>
-  <td>(11) 4725-3550</td>
+  <td>EDNA MARIA DA SILVA</td>
+  <td>(11) 97245-0287</td>
+  <td>(11) 4798-2034</td>
 </tr><tr>
-  <td>MILTON LINS DA SILVA</td>
-  <td>PSD</td>
+  <td>FELIPE AUGUSTO TEDESCHI LINTZ</td>
+  <td>PL</td>
   <td>1500</td>
-  <td>THIAGO HENRIQUE DA SILVA</td>
-  <td>(11) 2610-2019</td>
-  <td>(11) 4725-5002</td>
+  <td>MARIA APARECIDA GOMES</td>
+  <td>(11) 96451-8775</td>
+  <td>(11) 4791-7442</td>
+</tr><tr>
+  <td>FELIPE AUGUSTO TEDESCHI LINTZ</td>
+  <td>PL</td>
+  <td>1000</td>
+  <td>PEDRO HENRIQUE DA COSTA</td>
+  <td>(11) 94002-5181</td>
+  <td>(11) 4796-6025</td>
+</tr><tr>
+  <td>MARIA LUIZA FERNANDES</td>
+  <td>PL</td>
+  <td>1000</td>
+  <td>ANA PAULA SANTOS</td>
+  <td>(11) 94936-1188</td>
+  <td>(11) 4726-8097</td>
+</tr><tr>
+  <td>MARIA LUIZA FERNANDES</td>
+  <td>PL</td>
+  <td>1000</td>
+  <td>CRISTIANE DE SOUZA LIMA</td>
+  <td>(11) 95438-6212</td>
+  <td>(11) 4799-3198</td>
+</tr><tr>
+  <td>MARIA LUIZA FERNANDES</td>
+  <td>PL</td>
+  <td>1000</td>
+  <td>ELIANE APARECIDA DA SILVA</td>
+  <td>(11) 98273-4421</td>
+  <td>(11) 4726-7854</td>
+</tr><tr>
+  <td>MARIA LUIZA FERNANDES</td>
+  <td>PL</td>
+  <td>1000</td>
+  <td>JOSÉ ANTONIO PEREIRA</td>
+  <td>(11) 94716-5032</td>
+  <td>(11) 4799-2206</td>
+</tr><tr>
+  <td>MARIA LUIZA FERNANDES</td>
+  <td>PL</td>
+  <td>1000</td>
+  <td>MARCELO FERREIRA DOS SANTOS</td>
+  <td>(11) 95803-6297</td>
+  <td>(11) 4798-9024</td>
 </tr>
       </tbody>
     </table>
@@ -1752,47 +2591,26 @@
       </thead>
       <tbody>
         <tr>
-  <td>DAVID DE ARAUJO CAMPOS</td>
+  <td>LUCAS ALVES FERRARI</td>
   <td>PL</td>
   <td>1000</td>
-  <td>DAYSE DOS SANTOS LOPES</td>
-  <td>(11) 95307-6287</td>
-  <td>(11) 96509-4474</td>
+  <td>CRISTIANE APARECIDA DE OLIVEIRA</td>
+  <td>(11) 94039-6796</td>
+  <td>(11) 4634-2990</td>
 </tr><tr>
-  <td>LUIZ EDUARDO OLIVEIRA ALVES</td>
-  <td>PODE</td>
+  <td>LUCAS ALVES FERRARI</td>
+  <td>PL</td>
   <td>1500</td>
-  <td>FERNANDO LACERDA DA SILVA</td>
-  <td>(11) 97366-9418</td>
-  <td>(11) 97862-0516</td>
+  <td>EDSON LUIZ DE SOUZA</td>
+  <td>(11) 95443-3496</td>
+  <td>(11) 4638-5947</td>
 </tr><tr>
-  <td>NATALIA ANDRADE MORAIS ROCHA</td>
-  <td>PP</td>
-  <td>1500</td>
-  <td>BRENO MENEZES DE OLIVEIRA</td>
-  <td>(11) 91190-9696</td>
-  <td>(11) 2350-1790</td>
-</tr><tr>
-  <td>NATALIA ANDRADE MORAIS ROCHA</td>
-  <td>PP</td>
-  <td>1600</td>
-  <td>JOÃO HENRIQUE RIBEIRO FARIA</td>
-  <td>(11) 94874-9265</td>
-  <td>(11) 98408-7417</td>
-</tr><tr>
-  <td>SAULO DE OLIVEIRA SOUZA</td>
-  <td>PP</td>
-  <td>1500</td>
-  <td>ERIKA ARANTES BOERER</td>
-  <td>(11) 97182-6942</td>
-  <td>(11) 99574-0172</td>
-</tr><tr>
-  <td>SAULO DE OLIVEIRA SOUZA</td>
-  <td>PP</td>
-  <td>1500</td>
-  <td>JOÃO HENRIQUE DA SILVA BOGEA</td>
-  <td>(11) 93294-9047</td>
-  <td>(11) 96319-8823</td>
+  <td>LUCAS ALVES FERRARI</td>
+  <td>PL</td>
+  <td>1000</td>
+  <td>JOSÉ CARLOS DA SILVA</td>
+  <td>(11) 95036-3594</td>
+  <td>(11) 4638-6270</td>
 </tr>
       </tbody>
     </table>
@@ -1815,33 +2633,19 @@
       </thead>
       <tbody>
         <tr>
-  <td>MICHAEL SILVA SANTOS</td>
+  <td>MARCIO DE OLIVEIRA</td>
   <td>PL</td>
-  <td>300</td>
-  <td>FABIANA APARECIDA DE ALMEIDA MELO DA SILVA</td>
-  <td>(11) 99689-2772</td>
-  <td>(11) 99847-4974</td>
+  <td>1000</td>
+  <td>JOSEFA MARIA DA SILVA</td>
+  <td>(11) 94038-5738</td>
+  <td>(11) 4696-1485</td>
 </tr><tr>
-  <td>MICHAEL SILVA SANTOS</td>
+  <td>MARCIO DE OLIVEIRA</td>
   <td>PL</td>
-  <td>300</td>
-  <td>MARIA APARECIDA DE ALMEIDA MELO</td>
-  <td>(35) 99733-7299</td>
-  <td>(11) 97348-7862</td>
-</tr><tr>
-  <td>MICHAEL SILVA SANTOS</td>
-  <td>PL</td>
-  <td>300</td>
-  <td>PRICILLA NUNES COSTA</td>
-  <td>(11) 97209-6128</td>
-  <td>(11) 96392-1640</td>
-</tr><tr>
-  <td>MICHAEL SILVA SANTOS</td>
-  <td>PL</td>
-  <td>300</td>
-  <td>ROSANA ALMEIDA DE OLIVEIRA</td>
-  <td>(11) 97483-3405</td>
-  <td>(11) 99921-0368</td>
+  <td>1000</td>
+  <td>MARIA JOSÉ DOS SANTOS</td>
+  <td>(11) 95425-7437</td>
+  <td>(11) 4696-2063</td>
 </tr>
       </tbody>
     </table>
@@ -1864,33 +2668,33 @@
       </thead>
       <tbody>
         <tr>
-  <td>JOSE ALENCAR GALBIATTI</td>
-  <td>REPUBLICANOS</td>
-  <td>950</td>
-  <td>BRENO HENRIQUE DE BIAGI DEOLINDO</td>
-  <td>(11) 99019-8704</td>
-  <td>(11) 99662-8227</td>
+  <td>DENIS JOSÉ CÉSAR</td>
+  <td>PL</td>
+  <td>1500</td>
+  <td>ADRIANA DE OLIVEIRA SANTOS</td>
+  <td>(11) 97569-3198</td>
+  <td>(11) 4656-4183</td>
 </tr><tr>
-  <td>JOSE ALENCAR GALBIATTI</td>
-  <td>REPUBLICANOS</td>
-  <td>700</td>
-  <td>DANIELE RODRIGUES DE SOUZA</td>
-  <td>(11) 95043-9760</td>
-  <td>(11) 97598-7611</td>
+  <td>DENIS JOSÉ CÉSAR</td>
+  <td>PL</td>
+  <td>1000</td>
+  <td>CARLOS ALBERTO DE SOUZA</td>
+  <td>(11) 94755-1974</td>
+  <td>(11) 4656-5994</td>
 </tr><tr>
-  <td>JOSE ALENCAR GALBIATTI</td>
-  <td>REPUBLICANOS</td>
-  <td>700</td>
-  <td>GABRIELA MACEDO DE SOUZA</td>
-  <td>(11) 93472-5300</td>
-  <td>(11) 97421-4088</td>
+  <td>DENIS JOSÉ CÉSAR</td>
+  <td>PL</td>
+  <td>1000</td>
+  <td>MARIA CRISTINA FERREIRA</td>
+  <td>(11) 98261-4042</td>
+  <td>(11) 4656-1349</td>
 </tr><tr>
-  <td>JOSE ALENCAR GALBIATTI</td>
-  <td>REPUBLICANOS</td>
-  <td>950</td>
-  <td>LUCIANA CARDOSO DOS SANTOS</td>
-  <td>(11) 99305-4188</td>
-  <td>(11) 94102-2323</td>
+  <td>DENIS JOSÉ CÉSAR</td>
+  <td>PL</td>
+  <td>1500</td>
+  <td>ROBERTO DA SILVA</td>
+  <td>(11) 94546-4904</td>
+  <td>(11) 4656-9885</td>
 </tr>
       </tbody>
     </table>
@@ -1913,12 +2717,19 @@
       </thead>
       <tbody>
         <tr>
-  <td>EDIRLEI JUNIO REIS</td>
+  <td>ARTUR YUKIO TAKAYAMA</td>
   <td>PL</td>
-  <td>1000</td>
-  <td>GISELE RODRIGUES VILELA DE SOUZA</td>
-  <td>(11) 97150-2574</td>
-  <td>(11) 94752-2948</td>
+  <td>1500</td>
+  <td>ANA CLAUDIA FERREIRA</td>
+  <td>(11) 94025-5398</td>
+  <td>(11) 4742-7136</td>
+</tr><tr>
+  <td>ARTUR YUKIO TAKAYAMA</td>
+  <td>PL</td>
+  <td>1500</td>
+  <td>CARLOS HENRIQUE PEREIRA</td>
+  <td>(11) 94764-8361</td>
+  <td>(11) 4748-8126</td>
 </tr><tr>
   <td>EDIRLEI JUNIO REIS</td>
   <td>PL</td>
@@ -1968,6 +2779,12 @@
   </div>
   <div class="link-grid"><div class="link-row">
   <div>
+    <div class="link-city">`Cidade</div>
+    <div class="link-sub">Relatório por município</div>
+  </div>
+  <div><a class="action-btn small" href="Link`" target="_blank" rel="noopener noreferrer">Abrir relatório</a></div>
+</div><div class="link-row">
+  <div>
     <div class="link-city">Arujá</div>
     <div class="link-sub">Relatório por município</div>
   </div>
@@ -1978,6 +2795,12 @@
     <div class="link-sub">Relatório por município</div>
   </div>
   <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas_rotulagem/rotulagem__biritiba_mirim__20260427_182129.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></div>
+</div><div class="link-row">
+  <div>
+    <div class="link-city">Cachoeira Paulista</div>
+    <div class="link-sub">Relatório por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas_rotulagem/rotulagem__cachoeira_paulista__20260508_132051.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></div>
 </div><div class="link-row">
   <div>
     <div class="link-city">Ferraz de Vasconcelos</div>
@@ -1992,10 +2815,40 @@
   <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas_rotulagem/rotulagem__guararema__20260427_182250.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></div>
 </div><div class="link-row">
   <div>
+    <div class="link-city">Guaratinguetá</div>
+    <div class="link-sub">Relatório por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas_rotulagem/rotulagem__guaratingueta__20260508_132108.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></div>
+</div><div class="link-row">
+  <div>
+    <div class="link-city">Guarulhos</div>
+    <div class="link-sub">Relatório por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas_rotulagem/rotulagem__guarulhos__20260508_132144.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></div>
+</div><div class="link-row">
+  <div>
+    <div class="link-city">Ilhabela</div>
+    <div class="link-sub">Relatório por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas_rotulagem/rotulagem__ilhabela__20260508_132154.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></div>
+</div><div class="link-row">
+  <div>
     <div class="link-city">Itaquaquecetuba</div>
     <div class="link-sub">Relatório por município</div>
   </div>
   <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas_rotulagem/rotulagem__itaquaquecetuba__20260427_182310.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></div>
+</div><div class="link-row">
+  <div>
+    <div class="link-city">Jacareí</div>
+    <div class="link-sub">Relatório por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas_rotulagem/rotulagem__jacarei__20260415_102631.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></div>
+</div><div class="link-row">
+  <div>
+    <div class="link-city">Lorena</div>
+    <div class="link-sub">Relatório por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas_rotulagem/rotulagem__lorena__20260508_132200.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></div>
 </div><div class="link-row">
   <div>
     <div class="link-city">Mogi das Cruzes</div>
@@ -2022,10 +2875,34 @@
   <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas_rotulagem/rotulagem__santa_isabel__20260427_182420.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></div>
 </div><div class="link-row">
   <div>
+    <div class="link-city">Santos</div>
+    <div class="link-sub">Relatório por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas_rotulagem/rotulagem__santos__20260508_132210.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></div>
+</div><div class="link-row">
+  <div>
+    <div class="link-city">São José dos Campos</div>
+    <div class="link-sub">Relatório por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas_rotulagem/rotulagem__sao_jose_dos_campos__20260508_132228.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></div>
+</div><div class="link-row">
+  <div>
+    <div class="link-city">São Sebastião</div>
+    <div class="link-sub">Relatório por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas_rotulagem/rotulagem__sao_sebastiao__20260508_132240.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></div>
+</div><div class="link-row">
+  <div>
     <div class="link-city">Suzano</div>
     <div class="link-sub">Relatório por município</div>
   </div>
   <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas_rotulagem/rotulagem__suzano__20260427_182440.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></div>
+</div><div class="link-row">
+  <div>
+    <div class="link-city">Taubaté</div>
+    <div class="link-sub">Relatório por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/mapas_rotulagem/rotulagem__taubate__20260507_145040.html" target="_blank" rel="noopener noreferrer">Abrir relatório</a></div>
 </div></div>
 </section>
 <section class="page narrow" id="pagina10" data-nav="pagina10">
@@ -2039,61 +2916,121 @@
     <div class="link-city">Arujá</div>
     <div class="link-sub">GPS das oportunidades por município</div>
   </div>
-  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/finais/malu_fernandes/2/relatorio_aruja.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_aruja/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
 </div><div class="link-row">
   <div>
     <div class="link-city">Biritiba Mirim</div>
     <div class="link-sub">GPS das oportunidades por município</div>
   </div>
-  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/finais/malu_fernandes/2/relatorio_biritiba_mirim.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_biritiba_mirim/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+</div><div class="link-row">
+  <div>
+    <div class="link-city">Cachoeira Paulista</div>
+    <div class="link-sub">GPS das oportunidades por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_cachoeira_paulista/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
 </div><div class="link-row">
   <div>
     <div class="link-city">Ferraz de Vasconcelos</div>
     <div class="link-sub">GPS das oportunidades por município</div>
   </div>
-  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/finais/malu_fernandes/2/relatorio_ferraz_de_vasconcelos.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_ferraz_de_vasconcelos/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
 </div><div class="link-row">
   <div>
     <div class="link-city">Guararema</div>
     <div class="link-sub">GPS das oportunidades por município</div>
   </div>
-  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/finais/malu_fernandes/2/relatorio_guararema.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_guararema/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+</div><div class="link-row">
+  <div>
+    <div class="link-city">Guaratinguetá</div>
+    <div class="link-sub">GPS das oportunidades por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_guaratingueta/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+</div><div class="link-row">
+  <div>
+    <div class="link-city">Guarulhos</div>
+    <div class="link-sub">GPS das oportunidades por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_guarulhos/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+</div><div class="link-row">
+  <div>
+    <div class="link-city">Ilhabela</div>
+    <div class="link-sub">GPS das oportunidades por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_ilhabela/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
 </div><div class="link-row">
   <div>
     <div class="link-city">Itaquaquecetuba</div>
     <div class="link-sub">GPS das oportunidades por município</div>
   </div>
-  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/finais/malu_fernandes/2/relatorio_itaquaquecetuba.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_itaquaquecetuba/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+</div><div class="link-row">
+  <div>
+    <div class="link-city">Jacareí</div>
+    <div class="link-sub">GPS das oportunidades por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_jacarei/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+</div><div class="link-row">
+  <div>
+    <div class="link-city">Lorena</div>
+    <div class="link-sub">GPS das oportunidades por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_lorena/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
 </div><div class="link-row">
   <div>
     <div class="link-city">Mogi das Cruzes</div>
     <div class="link-sub">GPS das oportunidades por município</div>
   </div>
-  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/finais/malu_fernandes/2/relatorio_mogi_das_cruzes.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_mogi_das_cruzes/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
 </div><div class="link-row">
   <div>
     <div class="link-city">Poá</div>
     <div class="link-sub">GPS das oportunidades por município</div>
   </div>
-  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/finais/malu_fernandes/2/relatorio_poa.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_poa/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
 </div><div class="link-row">
   <div>
     <div class="link-city">Salesópolis</div>
     <div class="link-sub">GPS das oportunidades por município</div>
   </div>
-  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/finais/malu_fernandes/2/relatorio_salesopolis.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_salesopolis/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
 </div><div class="link-row">
   <div>
     <div class="link-city">Santa Isabel</div>
     <div class="link-sub">GPS das oportunidades por município</div>
   </div>
-  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/finais/malu_fernandes/2/relatorio_santa_isabel.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_santa_isabel/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+</div><div class="link-row">
+  <div>
+    <div class="link-city">Santos</div>
+    <div class="link-sub">GPS das oportunidades por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_santos/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+</div><div class="link-row">
+  <div>
+    <div class="link-city">São José dos Campos</div>
+    <div class="link-sub">GPS das oportunidades por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_sao_jose_dos_campos/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+</div><div class="link-row">
+  <div>
+    <div class="link-city">São Sebastião</div>
+    <div class="link-sub">GPS das oportunidades por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_sao_sebastiao/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
 </div><div class="link-row">
   <div>
     <div class="link-city">Suzano</div>
     <div class="link-sub">GPS das oportunidades por município</div>
   </div>
-  <div><a class="action-btn small" href="https://quadrifygit.github.io/dataquadri/finais/malu_fernandes/2/relatorio_suzano.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_suzano/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
+</div><div class="link-row">
+  <div>
+    <div class="link-city">Taubaté</div>
+    <div class="link-sub">GPS das oportunidades por município</div>
+  </div>
+  <div><a class="action-btn small" href="https://quadrifydata.github.io/malu_opor/relatorio_taubate/index.html" target="_blank" rel="noopener noreferrer">Abrir GPS</a></div>
 </div></div>
 </section>
 <section class="page narrow" id="pagina11" data-nav="pagina11">
@@ -2108,7 +3045,7 @@
     <div class="callout-title">Link disponível para consulta</div>
     <div class="callout-text">Abra aqui a planilha ou o Drive com coordenadas, códigos e materiais relativos ao GPS das oportunidades.</div>
   </div>
-  <a class="action-btn" href="https://drive.google.com/drive/folders/1AC09QLf9SGwFV4iQ5tzS-zTTdWS_ygM0?usp=drive_link" target="_blank" rel="noopener noreferrer">Abrir planilha de coordenadas</a>
+  <a class="action-btn" href="https://drive.google.com/drive/folders/1KZtUSFSAXz4k17g0hoHqeeXwX_vKOhL1?usp=drive_link" target="_blank" rel="noopener noreferrer">Abrir planilha de coordenadas</a>
 </div>
 </section>
     </div>
