@@ -1,0 +1,49 @@
+name: Publicar GitHub Pages Manualmente
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    name: Empacotar e publicar
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Baixar somente a versão atual
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+          lfs: false
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Informar tamanho do conteúdo
+        run: |
+          echo "Tamanho total:"
+          du -sh .
+          echo "Pastas maiores:"
+          du -h --max-depth=1 . | sort -hr | head -30
+
+      - name: Empacotar site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+          retention-days: 1
+
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
