@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Síntese completa do levantamento territorial e mapeamento de candidatos em Cuiabá." />
+  <title>Síntese Completa do Levantamento | Mato Grosso | Quadrify</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg0: #060913;
+      --bg1: #0b1022;
+      --bg2: #0f1830;
+      --card: rgba(255,255,255,0.05);
+      --card-strong: rgba(255,255,255,0.07);
+      --border: rgba(255,255,255,0.10);
+      --text: #e5e7eb;
+      --muted: #a7b0c0;
+      --primary: #3b82f6;
+      --primary2: #2563eb;
+      --accent: #38bdf8;
+      --shadow: 0 14px 40px rgba(0,0,0,0.45);
+      --soft-shadow: 0 10px 26px rgba(0,0,0,0.35);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 10% 0%, rgba(56,189,248,0.16), transparent 55%),
+        radial-gradient(1100px 500px at 90% 10%, rgba(59,130,246,0.14), transparent 50%),
+        linear-gradient(180deg, var(--bg0), var(--bg1) 45%, var(--bg2) 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .report-shell {
+      position: relative;
+      padding: 24px 14px 48px;
+    }
+
+    .side-nav {
+      position: fixed;
+      left: 18px;
+      top: 24px;
+      width: 194px;
+      z-index: 80;
+      padding: 14px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 22px;
+      background: rgba(8,12,24,.84);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+
+    .brand-mini {
+      padding: 4px 6px 14px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      margin-bottom: 12px;
+    }
+
+    .brand-mini span {
+      display: block;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .brand-mini strong {
+      display: block;
+      color: #fff;
+      font-size: 17px;
+      line-height: 1.25;
+    }
+
+    .side-nav-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .side-nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      min-height: 46px;
+      padding: 11px 12px;
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 14px;
+      background: rgba(255,255,255,.04);
+      color: #dce8ff;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.25;
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+
+    .side-nav a:hover {
+      background: rgba(56,189,248,.15);
+      border-color: rgba(56,189,248,.24);
+    }
+
+    .side-nav a.active {
+      background: linear-gradient(180deg, rgba(59,130,246,.96), rgba(37,99,235,.96));
+      border-color: rgba(255,255,255,.12);
+      box-shadow: 0 10px 18px rgba(37,99,235,.25);
+    }
+
+    .report-content { margin-left: 224px; }
+
+    .page {
+      max-width: 1480px;
+      margin: 0 auto 34px;
+      padding: 30px 34px 56px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(22px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      scroll-margin-top: 20px;
+    }
+
+    .pageHeader {
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 20px;
+    }
+
+    .pageNumber {
+      margin-bottom: 9px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .pageTitle {
+      margin: 0;
+      color: var(--accent);
+      font-size: clamp(28px, 3.4vw, 42px);
+      line-height: 1.08;
+      font-weight: 800;
+    }
+
+    .pageDesc {
+      max-width: 92ch;
+      margin-top: 11px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.68;
+    }
+
+    .text-card {
+      position: relative;
+      margin-top: 14px;
+      padding: 24px 26px;
+      border: 1px solid rgba(59,130,246,.24);
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(59,130,246,.13), rgba(255,255,255,.04));
+      box-shadow: var(--soft-shadow);
+      overflow: hidden;
+    }
+
+    .text-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--accent), var(--primary2));
+    }
+
+    .text-card p {
+      margin: 0 0 16px;
+      color: rgba(229,231,235,.94);
+      font-size: 15.5px;
+      line-height: 1.82;
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+    }
+
+    .text-card p:last-child { margin-bottom: 0; }
+
+    .map-block {
+      margin-top: 22px;
+      padding: 18px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 20px;
+      background: rgba(255,255,255,.035);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .map-block + .map-block { margin-top: 24px; }
+
+    .map-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 2px 2px 15px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      margin-bottom: 15px;
+    }
+
+    .map-kicker {
+      margin-bottom: 7px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .map-title {
+      margin: 0;
+      color: var(--accent);
+      font-size: 23px;
+      line-height: 1.2;
+      font-weight: 800;
+    }
+
+    .map-subtitle {
+      max-width: 78ch;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .status-badge {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 11px;
+      border: 1px solid rgba(56,189,248,.28);
+      border-radius: 999px;
+      background: rgba(56,189,248,.11);
+      color: #d8f3ff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .mapFrame {
+      display: block;
+      width: 100%;
+      height: 690px;
+      border: 0;
+      border-radius: 16px;
+      background: rgba(255,255,255,.03);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+    }
+
+    .mapActions {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 12px;
+      background: linear-gradient(180deg, var(--primary), var(--primary2));
+      color: #fff;
+      font-size: 13px;
+      font-weight: 800;
+      box-shadow: 0 10px 24px rgba(37,99,235,.28);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .action-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 28px rgba(37,99,235,.34);
+    }
+
+    .candidate-grid {
+      display: grid;
+      gap: 24px;
+      margin-top: 22px;
+    }
+
+    .footer-note {
+      max-width: 1480px;
+      margin: 0 auto;
+      padding: 2px 8px 0;
+      color: rgba(167,176,192,.8);
+      font-size: 12px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    @media (max-width: 1180px) {
+      .report-content { margin-left: 0; }
+
+      .side-nav {
+        position: sticky;
+        top: 10px;
+        left: auto;
+        width: min(1480px, 100%);
+        margin: 0 auto 18px;
+      }
+
+      .brand-mini { display: none; }
+      .side-nav-inner { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .side-nav a { justify-content: center; text-align: center; }
+    }
+
+    @media (max-width: 780px) {
+      .report-shell { padding: 12px 10px 34px; }
+      .page { padding: 22px 16px 38px; border-radius: 20px; }
+      .text-card { padding: 20px 18px; }
+      .text-card p { text-align: left; font-size: 15px; line-height: 1.75; }
+      .map-block { padding: 12px; }
+      .map-heading { flex-direction: column; gap: 10px; }
+      .mapFrame { height: 570px; }
+      .status-badge { align-self: flex-start; }
+    }
+
+    @media (max-width: 520px) {
+      .side-nav-inner { grid-template-columns: 1fr; }
+      .mapFrame { height: 510px; }
+      .pageTitle { font-size: 29px; }
+      .map-title { font-size: 20px; }
+    }
+
+    @media print {
+      body { background: #fff; color: #111827; }
+      .side-nav, .mapActions, .footer-note { display: none !important; }
+      .report-shell { padding: 0; }
+      .report-content { margin-left: 0; }
+      .page {
+        max-width: none;
+        margin: 0 0 18px;
+        border: 1px solid #d1d5db;
+        background: #fff;
+        color: #111827;
+        box-shadow: none;
+        break-after: page;
+      }
+      .pageTitle, .map-title { color: #0369a1; }
+      .pageDesc, .map-subtitle, .pageNumber, .map-kicker { color: #4b5563; }
+      .text-card, .map-block { background: #fff; border-color: #d1d5db; box-shadow: none; }
+      .text-card p { color: #111827; }
+    }
+  </style>
+</head>
+<body>
+  <div class="report-shell">
+    <nav class="side-nav" aria-label="Navegação do relatório">
+      <div class="brand-mini">
+        <span>Quadrify</span>
+        <strong>Levantamento<br />Mato Grosso</strong>
+      </div>
+      <div class="side-nav-inner">
+        <a href="#sintese" class="active">Síntese completa</a>
+        <a href="#candidatos">Mapeamento dos candidatos</a>
+      </div>
+    </nav>
+
+    <main class="report-content">
+      <section class="page" id="sintese" data-nav="sintese">
+        <header class="pageHeader">
+          <div class="pageNumber">PÁGINA 1</div>
+          <h1 class="pageTitle">Síntese completa do levantamento</h1>
+          <div class="pageDesc">Leitura territorial do potencial eleitoral para o Governo de Mato Grosso, com estimativas municipais, distribuição das vantagens e fatores que sustentam o cenário modelado.</div>
+        </header>
+
+        <article class="text-card" aria-label="Texto explicativo da síntese territorial">
+          <p>O levantamento territorial indica que Emanuel Pinheiro apresenta, neste momento, maior potencial eleitoral para uma disputa pelo Governo de Mato Grosso. No cenário modelado, Emanuel alcança aproximadamente 851 mil votos potenciais, contra 787 mil de Natasha, com vantagem em 85 municípios, enquanto Natasha lidera em 37 e outros 20 aparecem em situação de equilíbrio técnico. O mapa permite visualizar essa distribuição: os municípios em verde representam vantagem de Emanuel, os azuis indicam maior potencial de Natasha e os cinzas mostram empate técnico, sendo possível consultar em cada cidade os votos estimados, a diferença e os fatores que sustentam o resultado.</p>
+          <p>A vantagem de Emanuel está ligada principalmente ao seu capital político próprio. Ele já foi testado nas urnas, governou Cuiabá por dois mandatos, possui forte reconhecimento na capital e na Baixada Cuiabana e conta com uma rede política mensurável, formada também pelas votações de Márcia Pinheiro e do deputado federal Emanuelzinho. Soma-se a isso uma maior capacidade inicial de interlocução com o agronegócio e uma candidatura menos dependente da transferência de apoios externos. Natasha, por sua vez, apresenta maior competitividade em municípios mais alinhados ao PT, em áreas urbanas e onde saúde, representação feminina e a articulação de Carlos Fávaro possuem maior peso.</p>
+          <p>A principal conclusão é que Natasha possui apoios importantes e pode ser competitiva em regiões específicas, mas parte relevante de seu potencial depende da capacidade de Fávaro, do PT e da estrutura partidária transferirem votos para uma candidata ainda não testada em uma eleição geral. Emanuel parte de uma posição mais consolidada, com histórico eleitoral, base territorial, experiência executiva e rede própria. Por isso, o levantamento aponta que ele reúne hoje uma candidatura mais pronta, mais capilarizada e com maior potencial de expansão estadual.</p>
+        </article>
+
+        <section class="map-block" aria-labelledby="titulo-mapa-sintese">
+          <div class="map-heading">
+            <div>
+              <div class="map-kicker">MAPA DE SÍNTESE TERRITORIAL</div>
+              <h2 class="map-title" id="titulo-mapa-sintese">Potencial eleitoral em Mato Grosso</h2>
+              <div class="map-subtitle">Passe o cursor ou toque nos municípios para consultar as estimativas, a diferença entre os cenários e os fatores considerados no levantamento.</div>
+            </div>
+            <span class="status-badge">Mapa interativo</span>
+          </div>
+          <iframe
+            class="mapFrame"
+            loading="eager"
+            src="https://quadrifydata.github.io/mt-levantamento/"
+            title="Mapa de síntese territorial do levantamento em Mato Grosso"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="mapActions">
+            <a class="action-btn" href="https://quadrifydata.github.io/mt-levantamento/" target="_blank" rel="noopener noreferrer">Expandir mapa</a>
+          </div>
+        </section>
+      </section>
+
+      <section class="page" id="candidatos" data-nav="candidatos">
+        <header class="pageHeader">
+          <div class="pageNumber">PÁGINA 2</div>
+          <h2 class="pageTitle">Mapeamento dos candidatos pelas suas pautas em Cuiabá</h2>
+          <div class="pageDesc">Comparação territorial entre a aderência à pauta do agronegócio e a compatibilidade do eleitorado com os discursos e perfis políticos de Emanuel Pinheiro, Emanuelzinho e Drª Natasha Slhessarenko.</div>
+        </header>
+
+        <article class="text-card" aria-label="Texto explicativo dos mapas de agronegócio">
+          <p>Os três mapas apresentam uma leitura territorial da aderência do eleitorado à pauta do agronegócio. O fundo é igual em todas as versões e considera tanto características socioeconômicas associadas ao setor produtivo quanto o comportamento eleitoral registrado em disputas anteriores. As áreas verdes representam maior aderência ao agronegócio, as azuis indicam uma presença intermediária, mas ainda relevante, e as áreas vermelhas ou pretas apontam menor conexão com essa agenda. Sobre esse fundo aparecem os pinos de cada candidato. Os verdes identificam maior adesão às suas pautas principais, os azuis mostram compatibilidade com discursos mais centristas e abrangentes, enquanto os vermelhos e pretos indicam baixa convergência com o perfil político analisado.</p>
+          <p>A comparação permite avaliar um ponto importante sobre a capacidade de transferência do apoio de Carlos Fávaro para Natasha Slhessarenko. Fávaro consolidou sua imagem política a partir do agronegócio, da produção rural e da defesa do desenvolvimento econômico ligado ao campo. Natasha, por outro lado, possui uma identidade pública construída principalmente na saúde, na atuação médica, na gestão e na defesa da participação feminina. Isso não elimina o valor político do apoio, mas mostra que sua conversão em votos depende da capacidade de aproximar essas duas identidades. Nas regiões mais ligadas ao agronegócio, a presença de Fávaro pode abrir portas, mas Natasha ainda precisa transformar esse apoio institucional em reconhecimento, confiança e identificação direta com o eleitor.</p>
+          <p>Emanuel Pinheiro e Emanuelzinho partem de uma lógica diferente, porque já possuem recall eleitoral próprio. Emanuel governou Cuiabá por dois mandatos e acumulou uma trajetória que inclui passagens pela Câmara Municipal, pela Assembleia Legislativa e pela prefeitura da capital. Emanuelzinho, além de exercer o segundo mandato de deputado federal, possui votação territorialmente identificável, representada pelos pinos com estrela em seu mapa. A leitura conjunta não deve ser entendida como uma transferência automática de votos para qualquer candidatura, mas evidencia que o apoio de Fávaro, isoladamente, não resolve a diferença entre o perfil do apoiador e a identidade da candidata. O principal desafio de Natasha é construir uma ponte entre sua agenda de saúde, gestão e representação feminina e um eleitorado que reconhece Fávaro principalmente por sua atuação no agronegócio.</p>
+        </article>
+
+        <div class="candidate-grid">
+          <section class="map-block" aria-labelledby="titulo-mapa-emanuel">
+            <div class="map-heading">
+              <div>
+                <div class="map-kicker">CANDIDATO 1</div>
+                <h3 class="map-title" id="titulo-mapa-emanuel">Mapa de Emanuel Pinheiro</h3>
+                <div class="map-subtitle">Aderência territorial à pauta do agronegócio e compatibilidade com as pautas e o perfil político de Emanuel Pinheiro em Cuiabá.</div>
+              </div>
+              <span class="status-badge">Cuiabá</span>
+            </div>
+            <iframe
+              class="mapFrame"
+              loading="lazy"
+              src="https://quadrifygit.github.io/dataquadri/mapas/emanuel_comp_agro__sem_base__mt__cuiaba__2022__economia_e_empreendedorismo_-_producao_rural_agro_cadeias_produtivas_renda.html"
+              title="Mapa de Emanuel Pinheiro em Cuiabá"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="mapActions">
+              <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/emanuel_comp_agro__sem_base__mt__cuiaba__2022__economia_e_empreendedorismo_-_producao_rural_agro_cadeias_produtivas_renda.html" target="_blank" rel="noopener noreferrer">Expandir mapa</a>
+            </div>
+          </section>
+
+          <section class="map-block" aria-labelledby="titulo-mapa-emanuelzinho">
+            <div class="map-heading">
+              <div>
+                <div class="map-kicker">CANDIDATO 2</div>
+                <h3 class="map-title" id="titulo-mapa-emanuelzinho">Mapa de Emanuel Pinheiro Neto, Emanuelzinho</h3>
+                <div class="map-subtitle">Aderência territorial à pauta do agronegócio, compatibilidade com seu perfil político e identificação das áreas em que sua votação está representada pelos pinos com estrela.</div>
+              </div>
+              <span class="status-badge">Cuiabá</span>
+            </div>
+            <iframe
+              class="mapFrame"
+              loading="lazy"
+              src="https://quadrifygit.github.io/dataquadri/mapas/emanuel_neto_comp__emanuel__mt__cuiaba__2022__economia_e_empreendedorismo_-_producao_rural_agro_cadeias_produtivas_renda.html"
+              title="Mapa de Emanuelzinho em Cuiabá"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="mapActions">
+              <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/emanuel_neto_comp__emanuel__mt__cuiaba__2022__economia_e_empreendedorismo_-_producao_rural_agro_cadeias_produtivas_renda.html" target="_blank" rel="noopener noreferrer">Expandir mapa</a>
+            </div>
+          </section>
+
+          <section class="map-block" aria-labelledby="titulo-mapa-natasha">
+            <div class="map-heading">
+              <div>
+                <div class="map-kicker">CANDIDATA 3</div>
+                <h3 class="map-title" id="titulo-mapa-natasha">Mapa da Drª Natasha Slhessarenko</h3>
+                <div class="map-subtitle">Aderência territorial à pauta do agronegócio e compatibilidade com as pautas e o perfil público da Drª Natasha Slhessarenko em Cuiabá.</div>
+              </div>
+              <span class="status-badge">Cuiabá</span>
+            </div>
+            <iframe
+              class="mapFrame"
+              loading="lazy"
+              src="https://quadrifygit.github.io/dataquadri/mapas/natasha_comp__sem_base__mt__cuiaba__2022__economia_e_empreendedorismo_-_producao_rural_agro_cadeias_produtivas_renda.html"
+              title="Mapa da Dra. Natasha Slhessarenko em Cuiabá"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="mapActions">
+              <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/natasha_comp__sem_base__mt__cuiaba__2022__economia_e_empreendedorismo_-_producao_rural_agro_cadeias_produtivas_renda.html" target="_blank" rel="noopener noreferrer">Expandir mapa</a>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <div class="footer-note">Quadrify • Pesquisa e Inteligência • Relatório territorial interativo</div>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      const links = Array.from(document.querySelectorAll('.side-nav a'));
+      const sections = Array.from(document.querySelectorAll('[data-nav]'));
+
+      if (!('IntersectionObserver' in window)) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (!visible) return;
+        const id = visible.target.getAttribute('data-nav');
+        links.forEach((link) => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+        });
+      }, {
+        root: null,
+        rootMargin: '-18% 0px -62% 0px',
+        threshold: [0.05, 0.15, 0.3]
+      });
+
+      sections.forEach((section) => observer.observe(section));
+    })();
+  </script>
+</body>
+</html>
