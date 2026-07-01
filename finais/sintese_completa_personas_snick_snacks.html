@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Síntese completa das personas Snick Snacks, com leitura territorial de interesse potencial e regiões prioritárias." />
+  <title>Síntese Completa das Personas Snick Snacks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg0: #060913;
+      --bg1: #0b1022;
+      --bg2: #0f1830;
+      --card: rgba(255,255,255,0.05);
+      --card-strong: rgba(255,255,255,0.07);
+      --border: rgba(255,255,255,0.10);
+      --text: #e5e7eb;
+      --muted: #a7b0c0;
+      --primary: #3b82f6;
+      --primary2: #2563eb;
+      --accent: #38bdf8;
+      --green: #22c55e;
+      --green-soft: rgba(34,197,94,.14);
+      --blue-soft: rgba(56,189,248,.14);
+      --shadow: 0 14px 40px rgba(0,0,0,0.45);
+      --soft-shadow: 0 10px 26px rgba(0,0,0,0.35);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 10% 0%, rgba(56,189,248,0.16), transparent 55%),
+        radial-gradient(1100px 500px at 90% 10%, rgba(59,130,246,0.14), transparent 50%),
+        linear-gradient(180deg, var(--bg0), var(--bg1) 45%, var(--bg2) 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .report-shell {
+      position: relative;
+      padding: 24px 14px 48px;
+    }
+
+    .side-nav {
+      position: fixed;
+      left: 18px;
+      top: 24px;
+      width: 202px;
+      z-index: 80;
+      padding: 14px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 22px;
+      background: rgba(8,12,24,.84);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+
+    .brand-mini {
+      padding: 4px 6px 14px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      margin-bottom: 12px;
+    }
+
+    .brand-mini span {
+      display: block;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .brand-mini strong {
+      display: block;
+      color: #fff;
+      font-size: 17px;
+      line-height: 1.25;
+    }
+
+    .side-nav-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .side-nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      min-height: 44px;
+      padding: 10px 11px;
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 14px;
+      background: rgba(255,255,255,.04);
+      color: #dce8ff;
+      font-size: 12.5px;
+      font-weight: 700;
+      line-height: 1.25;
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+
+    .side-nav a:hover {
+      background: rgba(56,189,248,.15);
+      border-color: rgba(56,189,248,.24);
+    }
+
+    .side-nav a.active {
+      background: linear-gradient(180deg, rgba(59,130,246,.96), rgba(37,99,235,.96));
+      border-color: rgba(255,255,255,.12);
+      box-shadow: 0 10px 18px rgba(37,99,235,.25);
+    }
+
+    .report-content { margin-left: 232px; }
+
+    .page {
+      max-width: 1420px;
+      margin: 0 auto 34px;
+      padding: 30px 34px 52px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(22px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      scroll-margin-top: 20px;
+    }
+
+    .cover-page {
+      min-height: calc(100vh - 48px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .cover-kicker,
+    .pageNumber,
+    .map-kicker {
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .cover-kicker { margin-bottom: 16px; }
+
+    .cover-title {
+      max-width: 980px;
+      margin: 0;
+      color: var(--accent);
+      font-size: 42px;
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: -.025em;
+    }
+
+    .cover-subtitle {
+      max-width: 850px;
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    .pageHeader {
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 20px;
+    }
+
+    .pageNumber { margin-bottom: 9px; }
+
+    .pageTitle {
+      margin: 0;
+      color: var(--accent);
+      font-size: 28px;
+      line-height: 1.14;
+      font-weight: 800;
+    }
+
+    .pageDesc {
+      max-width: 94ch;
+      margin-top: 11px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.68;
+    }
+
+    .text-card {
+      position: relative;
+      margin-top: 14px;
+      padding: 24px 26px;
+      border: 1px solid rgba(59,130,246,.24);
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(59,130,246,.13), rgba(255,255,255,.04));
+      box-shadow: var(--soft-shadow);
+      overflow: hidden;
+    }
+
+    .text-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--accent), var(--primary2));
+    }
+
+    .text-card p {
+      margin: 0 0 15px;
+      color: rgba(229,231,235,.94);
+      font-size: 15px;
+      line-height: 1.72;
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+    }
+
+    .text-card p:last-child { margin-bottom: 0; }
+
+    .legend-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .legend-card {
+      padding: 18px 20px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.04);
+    }
+
+    .legend-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+
+    .legend-dot {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(255,255,255,.04);
+    }
+
+    .legend-dot.green { background: var(--green); }
+    .legend-dot.blue { background: var(--accent); }
+
+    .legend-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .priority-note {
+      margin-top: 16px;
+      padding: 18px 20px;
+      border: 1px solid rgba(34,197,94,.22);
+      border-radius: 18px;
+      background: linear-gradient(180deg, var(--green-soft), rgba(255,255,255,.035));
+      color: #eafbf0;
+      font-size: 14.5px;
+      line-height: 1.7;
+    }
+
+    .region-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .region-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 116px;
+      padding: 19px 20px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 18px;
+      background: rgba(255,255,255,.04);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .region-copy { min-width: 0; }
+
+    .region-label {
+      margin-bottom: 7px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+
+    .region-name {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .region-city {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .action-btn {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 12px;
+      background: linear-gradient(180deg, var(--primary), var(--primary2));
+      color: #fff;
+      font-size: 13px;
+      font-weight: 800;
+      box-shadow: 0 10px 24px rgba(37,99,235,.28);
+      transition: transform .18s ease, box-shadow .18s ease;
+      white-space: nowrap;
+    }
+
+    .action-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 28px rgba(37,99,235,.34);
+    }
+
+    .action-btn::after {
+      content: "↗";
+      margin-left: 8px;
+      font-size: 13px;
+    }
+
+    .full-card { grid-column: 1 / -1; }
+
+    .opportunity-callout {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 22px;
+      padding: 26px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: linear-gradient(180deg, rgba(59,130,246,.16), rgba(255,255,255,.04));
+      box-shadow: var(--soft-shadow);
+    }
+
+    .callout-copy { max-width: 820px; }
+
+    .callout-title {
+      margin: 0 0 8px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .callout-text {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .method-note {
+      margin-top: 18px;
+      color: rgba(167,176,192,.88);
+      font-size: 12.5px;
+      line-height: 1.65;
+    }
+
+    .footer-note {
+      max-width: 1420px;
+      margin: 0 auto;
+      padding: 2px 8px 0;
+      color: rgba(167,176,192,.8);
+      font-size: 12px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    @media (max-width: 1180px) {
+      .report-content { margin-left: 0; }
+
+      .side-nav {
+        position: sticky;
+        top: 10px;
+        left: auto;
+        width: min(1420px, 100%);
+        margin: 0 auto 18px;
+      }
+
+      .brand-mini { display: none; }
+      .side-nav-inner { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .side-nav a { justify-content: center; text-align: center; }
+      .cover-page { min-height: auto; }
+    }
+
+    @media (max-width: 820px) {
+      .report-shell { padding: 12px 10px 34px; }
+      .page { padding: 22px 16px 38px; border-radius: 20px; }
+      .text-card { padding: 20px 18px; }
+      .text-card p { text-align: left; font-size: 15px; line-height: 1.75; }
+      .region-grid, .legend-grid { grid-template-columns: 1fr; }
+      .region-card, .opportunity-callout { align-items: flex-start; flex-direction: column; }
+      .action-btn { width: 100%; }
+      .side-nav-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 520px) {
+      .side-nav-inner { grid-template-columns: 1fr; }
+      .cover-title { font-size: 32px; }
+      .pageTitle { font-size: 25px; }
+      .region-name { font-size: 16px; }
+    }
+
+    @media print {
+      body { background: #fff; color: #111827; }
+      .side-nav, .footer-note { display: none !important; }
+      .report-shell { padding: 0; }
+      .report-content { margin-left: 0; }
+      .page {
+        max-width: none;
+        margin: 0 0 18px;
+        border: 1px solid #d1d5db;
+        background: #fff;
+        color: #111827;
+        box-shadow: none;
+        break-after: page;
+      }
+      .cover-title, .pageTitle { color: #0369a1; }
+      .cover-subtitle, .pageDesc, .pageNumber, .cover-kicker, .region-city, .region-label, .callout-text, .method-note { color: #4b5563; }
+      .text-card, .region-card, .legend-card, .opportunity-callout { background: #fff; border-color: #d1d5db; box-shadow: none; }
+      .text-card p, .region-name, .callout-title { color: #111827; }
+      .action-btn { color: #fff; }
+    }
+  </style>
+</head>
+<body>
+  <div class="report-shell">
+    <nav class="side-nav" aria-label="Navegação do relatório">
+      <div class="brand-mini">
+        <span>Snick Snacks</span>
+        <strong>Síntese das<br />personas</strong>
+      </div>
+      <div class="side-nav-inner">
+        <a href="#sintese" class="active">Visão geral</a>
+        <a href="#ana">Persona 1 • Ana</a>
+        <a href="#beatriz">Persona 2 • Beatriz</a>
+        <a href="#carolina">Persona 3 • Carolina</a>
+        <a href="#daniela">Persona 4 • Daniela</a>
+        <a href="#oportunidades">Tabela de oportunidades</a>
+      </div>
+    </nav>
+
+    <main class="report-content">
+      <section class="page cover-page" id="sintese" data-nav="sintese">
+        <div class="cover-kicker">Leitura territorial de perfis de consumo</div>
+        <h1 class="cover-title">Síntese Completa das Personas Snick Snacks</h1>
+        <p class="cover-subtitle">Uma visão organizada das quatro personas prioritárias da marca, com regiões de maior interesse potencial e acessos diretos aos mapas que orientam comunicação, ativação e distribuição.</p>
+
+        <article class="text-card" aria-label="Como interpretar os mapas">
+          <p>Os mapas combinam duas camadas de leitura. O fundo representa, de forma abrangente, o interesse potencial pelos produtos Snick Snacks a partir de características socioeconômicas relevantes. As áreas verdes indicam o cenário mais favorável, enquanto as áreas azuis mostram um potencial relevante, ainda que secundário.</p>
+          <p>Sobre o fundo aparecem pinos que sinalizam locais com maior possibilidade de concentração das características associadas à persona analisada. Os pinos verdes representam maior aderência ao perfil, e os azuis apontam uma compatibilidade também importante. A prioridade está nos pontos em que pinos verdes ou azuis aparecem sobre áreas de fundo verde ou azul, pois essa combinação reúne interesse potencial pelo produto e maior proximidade com o perfil de consumo desejado.</p>
+          <p>A leitura deve orientar escolhas de mídia, ações de experimentação, parcerias locais, pontos de venda e distribuição. Os mapas não identificam pessoas individualmente. Eles ajudam a reconhecer regiões em que determinados hábitos, necessidades e condições de consumo tendem a estar mais presentes.</p>
+        </article>
+
+        <div class="legend-grid" aria-label="Legenda simplificada">
+          <div class="legend-card">
+            <div class="legend-top"><span class="legend-dot green"></span>Verde</div>
+            <p>Maior prioridade. Indica a combinação mais favorável entre interesse potencial e aderência ao perfil da persona.</p>
+          </div>
+          <div class="legend-card">
+            <div class="legend-top"><span class="legend-dot blue"></span>Azul</div>
+            <p>Prioridade complementar. Representa potencial relevante para ampliar alcance, testar mensagens e desenvolver presença.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="ana" data-nav="ana">
+        <header class="pageHeader">
+          <div class="pageNumber">PERSONA 1</div>
+          <h2 class="pageTitle">Ana, a Mãe Fitness</h2>
+          <div class="pageDesc">32 anos, personal trainer e influenciadora digital em São Paulo. Tem uma rotina ativa, um filho de 5 anos e busca lanches saudáveis, práticos e confiáveis para toda a família.</div>
+        </header>
+
+        <article class="text-card" aria-label="Leitura da persona Ana">
+          <p>Ana representa mães com alto envolvimento com atividade física, alimentação equilibrada e escolhas de consumo orientadas pela saúde. Sua rotina exige produtos práticos, mas ela tende a observar composição, presença de açúcar, aditivos e capacidade do snack de oferecer energia sem comprometer a qualidade nutricional.</p>
+          <p>Neste mapa, o fundo destaca áreas com maior interesse potencial pelo produto. Os pinos indicam locais em que características como presença de mulheres na faixa etária de Ana, domicílios com crianças, renda familiar, escolaridade e inserção em atividades profissionais relacionadas ao seu perfil aparecem com maior intensidade. A combinação de fundo verde ou azul com pinos verdes ou azuis deve ser tratada como prioridade para ações com academias, escolas, influenciadores, mercados e serviços voltados ao bem-estar.</p>
+        </article>
+
+        <div class="priority-note"><strong>Prioridade de atuação:</strong> locais em que a busca por saúde, praticidade e qualidade se encontra com maior capacidade de consumo e presença de famílias com rotina intensa.</div>
+
+        <div class="region-grid" aria-label="Mapas da persona Ana">
+          <div class="region-card">
+            <div class="region-copy"><div class="region-label">Região</div><div class="region-name">Perdizes e Água Branca</div><div class="region-city">São Paulo</div></div>
+            <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/ana/ana__sem_base__sp__sao_paulo__2022__economia_e_patrimonio_-_renda_media_formalizacao_padrao_urbano_consumo__zona_2.html" target="_blank" rel="noopener noreferrer">Abrir mapa</a>
+          </div>
+          <div class="region-card">
+            <div class="region-copy"><div class="region-label">Região</div><div class="region-name">Vila Mariana e Vila Clementino</div><div class="region-city">São Paulo</div></div>
+            <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/ana/ana__sem_base__sp__sao_paulo__2022__economia_e_patrimonio_-_renda_media_formalizacao_padrao_urbano_consumo__zona_6.html" target="_blank" rel="noopener noreferrer">Abrir mapa</a>
+          </div>
+          <div class="region-card">
+            <div class="region-copy"><div class="region-label">Região</div><div class="region-name">Pinheiros</div><div class="region-city">São Paulo</div></div>
+            <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/ana/ana__sem_base__sp__sao_paulo__2022__economia_e_patrimonio_-_renda_media_formalizacao_padrao_urbano_consumo__zona_251.html" target="_blank" rel="noopener noreferrer">Abrir mapa</a>
+          </div>
+          <div class="region-card">
+            <div class="region-copy"><div class="region-label">Região</div><div class="region-name">Tatuapé e Vila Azevedo</div><div class="region-city">São Paulo</div></div>
+            <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/ana/ana__sem_base__sp__sao_paulo__2022__economia_e_patrimonio_-_renda_media_formalizacao_padrao_urbano_consumo__zona_253.html" target="_blank" rel="noopener noreferrer">Abrir mapa</a>
+          </div>
+          <div class="region-card full-card">
+            <div class="region-copy"><div class="region-label">Região</div><div class="region-name">Indianópolis e Moema</div><div class="region-city">São Paulo</div></div>
+            <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/ana/ana__sem_base__sp__sao_paulo__2022__economia_e_patrimonio_-_renda_media_formalizacao_padrao_urbano_consumo__zona_258.html" target="_blank" rel="noopener noreferrer">Abrir mapa</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="beatriz" data-nav="beatriz">
+        <header class="pageHeader">
+          <div class="pageNumber">PERSONA 2</div>
+          <h2 class="pageTitle">Beatriz, a Mãe Executiva</h2>
+          <div class="pageDesc">46 anos, gerente de marketing no Rio de Janeiro e mãe de duas crianças. Equilibra uma carreira exigente com a rotina familiar e valoriza conveniência, variedade e confiança.</div>
+        </header>
+
+        <article class="text-card" aria-label="Leitura da persona Beatriz">
+          <p>Beatriz representa mães com pouco tempo disponível, alto nível de responsabilidade e forte necessidade de simplificar decisões. Ela procura produtos que funcionem para sua própria rotina e para a lancheira dos filhos, sem exigir preparação, supervisão constante ou concessões excessivas em relação à qualidade.</p>
+          <p>O fundo do mapa evidencia as áreas com maior interesse potencial pelo produto. Os pinos mostram locais com maior presença de mulheres na faixa etária de Beatriz, famílias com filhos em idade escolar, mulheres responsáveis pelo domicílio, maior renda, escolaridade e participação em ocupações formais ou de gestão. A sobreposição das melhores cores ajuda a priorizar supermercados, escolas, centros empresariais, clubes, serviços por assinatura e canais digitais com promessa clara de praticidade e segurança.</p>
+        </article>
+
+        <div class="priority-note"><strong>Prioridade de atuação:</strong> regiões em que conveniência, poder de compra e rotina familiar corrida aumentam a disposição para experimentar soluções prontas e confiáveis.</div>
+
+        <div class="region-grid" aria-label="Mapas da persona Beatriz">
+          <div class="region-card">
+            <div class="region-copy"><div class="region-label">Região</div><div class="region-name">Botafogo e Flamengo</div><div class="region-city">Rio de Janeiro</div></div>
+            <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/beatriz/beatriz__sem_base__rj__rio_de_janeiro__2022__consumo_e_financas_-_alto_consumo_premium_marcas_e_servicos_privados__zona_4.html" target="_blank" rel="noopener noreferrer">Abrir mapa</a>
+          </div>
+          <div class="region-card">
+            <div class="region-copy"><div class="region-label">Região</div><div class="region-name">Barra da Tijuca e Recreio dos Bandeirantes</div><div class="region-city">Rio de Janeiro</div></div>
+            <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/beatriz/beatriz__sem_base__rj__rio_de_janeiro__2022__consumo_e_financas_-_alto_consumo_premium_marcas_e_servicos_privados__zona_9.html" target="_blank" rel="noopener noreferrer">Abrir mapa</a>
+          </div>
+          <div class="region-card">
+            <div class="region-copy"><div class="region-label">Região</div><div class="region-name">Leblon e Gávea</div><div class="region-city">Rio de Janeiro</div></div>
+            <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/beatriz/beatriz__sem_base__rj__rio_de_janeiro__2022__consumo_e_financas_-_alto_consumo_premium_marcas_e_servicos_privados__zona_17.html" target="_blank" rel="noopener noreferrer">Abrir mapa</a>
+          </div>
+          <div class="region-card">
+            <div class="region-copy"><div class="region-label">Região</div><div class="region-name">Barra da Tijuca e Itanhangá</div><div class="region-city">Rio de Janeiro</div></div>
+            <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/beatriz/beatriz__sem_base__rj__rio_de_janeiro__2022__consumo_e_financas_-_alto_consumo_premium_marcas_e_servicos_privados__zona_119.html" target="_blank" rel="noopener noreferrer">Abrir mapa</a>
+          </div>
+          <div class="region-card full-card">
+            <div class="region-copy"><div class="region-label">Região</div><div class="region-name">Pechincha e Cidade de Deus</div><div class="region-city">Rio de Janeiro</div></div>
+            <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/beatriz/beatriz__sem_base__rj__rio_de_janeiro__2022__consumo_e_financas_-_alto_consumo_premium_marcas_e_servicos_privados__zona_179.html" target="_blank" rel="noopener noreferrer">Abrir mapa</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="carolina" data-nav="carolina">
+        <header class="pageHeader">
+          <div class="pageNumber">PERSONA 3</div>
+          <h2 class="pageTitle">Carolina, a Mãe Consciente</h2>
+          <div class="pageDesc">35 anos, professora de educação infantil em Belo Horizonte e mãe de uma menina com restrições a glúten e lactose. Valoriza segurança, transparência e responsabilidade.</div>
+        </header>
+
+        <article class="text-card" aria-label="Leitura da persona Carolina">
+          <p>Carolina representa mães que pesquisam antes de comprar e precisam confiar plenamente no produto. Informações claras sobre ingredientes, fabricação e possibilidade de contaminação cruzada são decisivas. Além de buscar variedade para a filha, ela valoriza marcas transparentes, responsáveis e capazes de tornar a alimentação restritiva mais segura e prazerosa.</p>
+          <p>O fundo do mapa evidencia as áreas com maior interesse potencial pelo produto. Os pinos indicam locais com maior presença de mulheres na faixa etária de Carolina, famílias com crianças em idade escolar, níveis mais elevados de escolaridade e concentração de profissionais ligados à educação, aos serviços públicos e a atividades de cuidado. A combinação de verde e azul ajuda a orientar parcerias com escolas, clínicas, lojas especializadas, comunidades de pais e pontos de venda que valorizem rotulagem clara e confiança.</p>
+        </article>
+
+        <div class="priority-note"><strong>Prioridade de atuação:</strong> regiões em que informação, cuidado familiar e busca por produtos seguros favorecem mensagens baseadas em transparência e confiança.</div>
+
+        <div class="region-grid" aria-label="Mapas da persona Carolina">
+          <div class="region-card">
+            <div class="region-copy"><div class="region-label">Região</div><div class="region-name">Sagrada Família e Floresta</div><div class="region-city">Belo Horizonte</div></div>
+            <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/carolina/carolina__sem_base__mg__belo_horizonte__2022__economia_e_empreendedorismo_-_trabalhadores_em_saude_e_educacao_setor_publico__zona_26.html" target="_blank" rel="noopener noreferrer">Abrir mapa</a>
+          </div>
+          <div class="region-card">
+            <div class="region-copy"><div class="region-label">Região</div><div class="region-name">Cidade Nova e União</div><div class="region-city">Belo Horizonte</div></div>
+            <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/carolina/carolina__sem_base__mg__belo_horizonte__2022__economia_e_empreendedorismo_-_trabalhadores_em_saude_e_educacao_setor_publico__zona_27.html" target="_blank" rel="noopener noreferrer">Abrir mapa</a>
+          </div>
+          <div class="region-card">
+            <div class="region-copy"><div class="region-label">Região</div><div class="region-name">Centro e Funcionários</div><div class="region-city">Belo Horizonte</div></div>
+            <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/carolina/carolina__sem_base__mg__belo_horizonte__2022__economia_e_empreendedorismo_-_trabalhadores_em_saude_e_educacao_setor_publico__zona_33.html" target="_blank" rel="noopener noreferrer">Abrir mapa</a>
+          </div>
+          <div class="region-card">
+            <div class="region-copy"><div class="region-label">Região</div><div class="region-name">Gutierrez e Cidade Jardim</div><div class="region-city">Belo Horizonte</div></div>
+            <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/carolina/carolina__sem_base__mg__belo_horizonte__2022__economia_e_empreendedorismo_-_trabalhadores_em_saude_e_educacao_setor_publico__zona_34.html" target="_blank" rel="noopener noreferrer">Abrir mapa</a>
+          </div>
+          <div class="region-card full-card">
+            <div class="region-copy"><div class="region-label">Região</div><div class="region-name">Anchieta e Serra</div><div class="region-city">Belo Horizonte</div></div>
+            <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/carolina/carolina__sem_base__mg__belo_horizonte__2022__economia_e_empreendedorismo_-_trabalhadores_em_saude_e_educacao_setor_publico__zona_35.html" target="_blank" rel="noopener noreferrer">Abrir mapa</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="daniela" data-nav="daniela">
+        <header class="pageHeader">
+          <div class="pageNumber">PERSONA 4</div>
+          <h2 class="pageTitle">Daniela, a Mãe Criativa</h2>
+          <div class="pageDesc">30 anos, designer gráfica freelance em Florianópolis, solteira e mãe de uma criança com seletividade alimentar. Procura experiências divertidas, sensoriais e educativas.</div>
+        </header>
+
+        <article class="text-card" aria-label="Leitura da persona Daniela">
+          <p>Daniela representa mães dispostas a experimentar novas formas de apresentar alimentos às crianças. Textura, formato, cor, embalagem e narrativa do produto têm peso especial, pois o snack precisa despertar curiosidade antes mesmo da primeira mordida. Ao mesmo tempo, ela busca opções saudáveis que reduzam o esforço de preparar várias alternativas sem garantia de aceitação.</p>
+          <p>O mapa cobre Florianópolis de forma integrada. O fundo evidencia as áreas com maior interesse potencial pelo produto, enquanto os pinos destacam locais com maior presença de mulheres na faixa etária de Daniela, domicílios monoparentais femininos com crianças pequenas, trabalho autônomo, ocupações criativas, escolaridade e renda compatíveis com o perfil analisado. As melhores combinações ajudam a orientar testes de produto, ações em espaços infantis, escolas, feiras criativas, lojas naturais e ambientes ligados a design, cultura e educação.</p>
+        </article>
+
+        <div class="priority-note"><strong>Prioridade de atuação:</strong> pontos em que consumo qualificado, vida familiar e abertura a experiências lúdicas favorecem produtos visualmente atraentes e sensorialmente variados.</div>
+
+        <div class="region-grid" aria-label="Mapa da persona Daniela">
+          <div class="region-card full-card">
+            <div class="region-copy"><div class="region-label">Abrangência</div><div class="region-name">Florianópolis inteira</div><div class="region-city">Santa Catarina</div></div>
+            <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/daniela__sem_base__sc__florianopolis__2022__economia_e_patrimonio_-_renda_media_formalizacao_padrao_urbano_consumo.html" target="_blank" rel="noopener noreferrer">Abrir mapa</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="oportunidades" data-nav="oportunidades">
+        <header class="pageHeader">
+          <div class="pageNumber">ACESSO COMPLEMENTAR</div>
+          <h2 class="pageTitle">Tabela de Oportunidades</h2>
+          <div class="pageDesc">Consulta prática das localidades que apresentam maior potencial para ativação, presença comercial e aproximação com cada persona.</div>
+        </header>
+
+        <div class="opportunity-callout">
+          <div class="callout-copy">
+            <h3 class="callout-title">Encontre os melhores endereços para cada persona</h3>
+            <p class="callout-text">A tabela reúne os endereços das localidades mais promissoras identificadas nos mapas. Use esse material para planejar visitas, parcerias, degustações, distribuição, comunicação local e testes de mercado.</p>
+          </div>
+          <a class="action-btn" href="https://docs.google.com/spreadsheets/d/1N7Mfi_H6hmNwGBx3lNkpKVhf1B4fT_bk/edit?usp=sharing&ouid=114857027147481289571&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">Acessar tabela</a>
+        </div>
+
+        <p class="method-note">As regiões apresentadas funcionam como referências territoriais para organização das ações. A decisão final deve considerar disponibilidade de pontos de venda, circulação de famílias, presença de serviços relacionados e viabilidade operacional.</p>
+      </section>
+
+      <div class="footer-note">Quadrify • Pesquisa e Inteligência • Síntese territorial de personas para Snick Snacks</div>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      const links = Array.from(document.querySelectorAll('.side-nav a'));
+      const sections = Array.from(document.querySelectorAll('[data-nav]'));
+
+      if (!('IntersectionObserver' in window)) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (!visible) return;
+        const id = visible.target.getAttribute('data-nav');
+        links.forEach((link) => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+        });
+      }, {
+        root: null,
+        rootMargin: '-18% 0px -62% 0px',
+        threshold: [0.05, 0.15, 0.3]
+      });
+
+      sections.forEach((section) => observer.observe(section));
+    })();
+  </script>
+</body>
+</html>
