@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Síntese territorial, GPS das Oportunidades e desempenho eleitoral em Cuiabá para a Drª Natasha Slhessarenko." />
+  <title>Levantamento Territorial | Drª Natasha Slhessarenko | Mato Grosso | Quadrify</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg0: #060913;
+      --bg1: #0b1022;
+      --bg2: #0f1830;
+      --card: rgba(255,255,255,0.05);
+      --card-strong: rgba(255,255,255,0.07);
+      --border: rgba(255,255,255,0.10);
+      --text: #e5e7eb;
+      --muted: #a7b0c0;
+      --primary: #3b82f6;
+      --primary2: #2563eb;
+      --accent: #38bdf8;
+      --shadow: 0 14px 40px rgba(0,0,0,0.45);
+      --soft-shadow: 0 10px 26px rgba(0,0,0,0.35);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 10% 0%, rgba(56,189,248,0.16), transparent 55%),
+        radial-gradient(1100px 500px at 90% 10%, rgba(59,130,246,0.14), transparent 50%),
+        linear-gradient(180deg, var(--bg0), var(--bg1) 45%, var(--bg2) 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .report-shell {
+      position: relative;
+      padding: 24px 14px 48px;
+    }
+
+    .side-nav {
+      position: fixed;
+      left: 18px;
+      top: 24px;
+      width: 194px;
+      z-index: 80;
+      padding: 14px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 22px;
+      background: rgba(8,12,24,.84);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+
+    .brand-mini {
+      padding: 4px 6px 14px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      margin-bottom: 12px;
+    }
+
+    .brand-mini span {
+      display: block;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .brand-mini strong {
+      display: block;
+      color: #fff;
+      font-size: 17px;
+      line-height: 1.25;
+    }
+
+    .side-nav-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .side-nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      min-height: 46px;
+      padding: 11px 12px;
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 14px;
+      background: rgba(255,255,255,.04);
+      color: #dce8ff;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.25;
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+
+    .side-nav a:hover {
+      background: rgba(56,189,248,.15);
+      border-color: rgba(56,189,248,.24);
+    }
+
+    .side-nav a.active {
+      background: linear-gradient(180deg, rgba(59,130,246,.96), rgba(37,99,235,.96));
+      border-color: rgba(255,255,255,.12);
+      box-shadow: 0 10px 18px rgba(37,99,235,.25);
+    }
+
+    .report-content { margin-left: 224px; }
+
+    .page {
+      max-width: 1480px;
+      margin: 0 auto 34px;
+      padding: 30px 34px 56px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(22px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      scroll-margin-top: 20px;
+    }
+
+    .pageHeader {
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 20px;
+    }
+
+    .pageNumber {
+      margin-bottom: 9px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .pageTitle {
+      margin: 0;
+      color: var(--accent);
+      font-size: clamp(28px, 3.4vw, 42px);
+      line-height: 1.08;
+      font-weight: 800;
+    }
+
+    .pageDesc {
+      max-width: 92ch;
+      margin-top: 11px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.68;
+    }
+
+    .text-card {
+      position: relative;
+      margin-top: 14px;
+      padding: 24px 26px;
+      border: 1px solid rgba(59,130,246,.24);
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(59,130,246,.13), rgba(255,255,255,.04));
+      box-shadow: var(--soft-shadow);
+      overflow: hidden;
+    }
+
+    .text-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--accent), var(--primary2));
+    }
+
+    .text-card p {
+      margin: 0 0 16px;
+      color: rgba(229,231,235,.94);
+      font-size: 15.5px;
+      line-height: 1.82;
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+    }
+
+    .text-card p:last-child { margin-bottom: 0; }
+
+    .map-block {
+      margin-top: 22px;
+      padding: 18px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 20px;
+      background: rgba(255,255,255,.035);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .map-block + .map-block { margin-top: 24px; }
+
+    .map-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 2px 2px 15px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      margin-bottom: 15px;
+    }
+
+    .map-kicker {
+      margin-bottom: 7px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .map-title {
+      margin: 0;
+      color: var(--accent);
+      font-size: 23px;
+      line-height: 1.2;
+      font-weight: 800;
+    }
+
+    .map-subtitle {
+      max-width: 78ch;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .status-badge {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 11px;
+      border: 1px solid rgba(56,189,248,.28);
+      border-radius: 999px;
+      background: rgba(56,189,248,.11);
+      color: #d8f3ff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .mapFrame {
+      display: block;
+      width: 100%;
+      height: 690px;
+      border: 0;
+      border-radius: 16px;
+      background: rgba(255,255,255,.03);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+    }
+
+    .mapActions {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 12px;
+      background: linear-gradient(180deg, var(--primary), var(--primary2));
+      color: #fff;
+      font-size: 13px;
+      font-weight: 800;
+      box-shadow: 0 10px 24px rgba(37,99,235,.28);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .action-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 28px rgba(37,99,235,.34);
+    }
+
+    .candidate-grid {
+      display: grid;
+      gap: 24px;
+      margin-top: 22px;
+    }
+
+    .footer-note {
+      max-width: 1480px;
+      margin: 0 auto;
+      padding: 2px 8px 0;
+      color: rgba(167,176,192,.8);
+      font-size: 12px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    @media (max-width: 1180px) {
+      .report-content { margin-left: 0; }
+
+      .side-nav {
+        position: sticky;
+        top: 10px;
+        left: auto;
+        width: min(1480px, 100%);
+        margin: 0 auto 18px;
+      }
+
+      .brand-mini { display: none; }
+      .side-nav-inner { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .side-nav a { justify-content: center; text-align: center; }
+    }
+
+    @media (max-width: 780px) {
+      .report-shell { padding: 12px 10px 34px; }
+      .page { padding: 22px 16px 38px; border-radius: 20px; }
+      .text-card { padding: 20px 18px; }
+      .text-card p { text-align: left; font-size: 15px; line-height: 1.75; }
+      .map-block { padding: 12px; }
+      .map-heading { flex-direction: column; gap: 10px; }
+      .mapFrame { height: 570px; }
+      .status-badge { align-self: flex-start; }
+    }
+
+    @media (max-width: 520px) {
+      .side-nav-inner { grid-template-columns: 1fr; }
+      .mapFrame { height: 510px; }
+      .pageTitle { font-size: 29px; }
+      .map-title { font-size: 20px; }
+    }
+
+    @media print {
+      body { background: #fff; color: #111827; }
+      .side-nav, .mapActions, .footer-note { display: none !important; }
+      .report-shell { padding: 0; }
+      .report-content { margin-left: 0; }
+      .page {
+        max-width: none;
+        margin: 0 0 18px;
+        border: 1px solid #d1d5db;
+        background: #fff;
+        color: #111827;
+        box-shadow: none;
+        break-after: page;
+      }
+      .pageTitle, .map-title { color: #0369a1; }
+      .pageDesc, .map-subtitle, .pageNumber, .map-kicker { color: #4b5563; }
+      .text-card, .map-block { background: #fff; border-color: #d1d5db; box-shadow: none; }
+      .text-card p { color: #111827; }
+    }
+
+
+    .page.narrow { max-width: 1260px; }
+
+    .action-btn.small {
+      min-height: 40px;
+      padding: 9px 12px;
+      font-size: 13px;
+    }
+
+    .callout-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      padding: 22px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: linear-gradient(180deg, rgba(59,130,246,.16), rgba(255,255,255,.04));
+      box-shadow: var(--soft-shadow);
+    }
+
+    .callout-title {
+      margin-bottom: 8px;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .callout-text {
+      max-width: 72ch;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="report-shell">
+    <nav class="side-nav" aria-label="Navegação do relatório">
+      <div class="brand-mini">
+        <span>Quadrify</span>
+        <strong>Levantamento<br />Mato Grosso</strong>
+      </div>
+      <div class="side-nav-inner">
+        <a href="#sintese" class="active">Síntese completa</a>
+        <a href="#gps-oportunidades">GPS das oportunidades</a>
+        <a href="#coordenadas">Coordenadas GPS</a>
+      </div>
+    </nav>
+
+    <main class="report-content">
+      <section class="page" id="sintese" data-nav="sintese">
+        <header class="pageHeader">
+          <div class="pageNumber">PÁGINA 1</div>
+          <h1 class="pageTitle">Síntese completa do levantamento</h1>
+          <div class="pageDesc">Leitura territorial do potencial eleitoral para o Governo de Mato Grosso, com estimativas municipais, distribuição das vantagens e fatores que sustentam o cenário modelado.</div>
+        </header>
+
+        <section class="map-block" aria-labelledby="titulo-mapa-sintese">
+          <div class="map-heading">
+            <div>
+              <div class="map-kicker">MAPA DE SÍNTESE TERRITORIAL</div>
+              <h2 class="map-title" id="titulo-mapa-sintese">Potencial eleitoral em Mato Grosso</h2>
+              <div class="map-subtitle">Passe o cursor ou toque nos municípios para consultar as estimativas, a diferença entre os cenários e os fatores considerados no levantamento.</div>
+            </div>
+            <span class="status-badge">Mapa interativo</span>
+          </div>
+          <iframe
+            class="mapFrame"
+            loading="eager"
+            src="https://quadrifydata.github.io/Natasha-mt/"
+            title="Mapa de síntese territorial da Drª Natasha Slhessarenko em Mato Grosso"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="mapActions">
+            <a class="action-btn" href="https://quadrifydata.github.io/Natasha-mt/" target="_blank" rel="noopener noreferrer">Expandir mapa</a>
+          </div>
+        </section>
+      </section>
+
+      <section class="page" id="gps-oportunidades" data-nav="gps-oportunidades">
+        <header class="pageHeader">
+          <div class="pageNumber">PÁGINA 2</div>
+          <h2 class="pageTitle">GPS das Oportunidades - Drª Natasha Slhessarenko</h2>
+        </header>
+
+        <article class="text-card" aria-label="Como interpretar os mapas do GPS das Oportunidades">
+          <p>Em cada mapa, o fundo representa a aderência territorial à pauta analisada: o verde indica o melhor cenário possível e o azul representa uma condição subideal, mas ainda boa. Os pinos representam a aderência ao perfil da Drª Natasha Slhessarenko: o verde indica a melhor compatibilidade possível, o azul aponta uma compatibilidade subideal, mas ainda boa, e o preto e o vermelho indicam baixa aderência.</p>
+        </article>
+
+        <div class="candidate-grid">
+          <section class="map-block" aria-labelledby="titulo-pauta-1">
+            <div class="map-heading">
+              <div>
+                <div class="map-kicker">PAUTA 1</div>
+                <h3 class="map-title" id="titulo-pauta-1">Aderência à pauta de igualdade de gênero</h3>
+              </div>
+              <span class="status-badge">Cuiabá</span>
+            </div>
+            <iframe
+              class="mapFrame"
+              loading="lazy"
+              src="https://quadrifygit.github.io/dataquadri/mapas/natasha_comp__sem_base__mt__cuiaba__2022__igualdade_e_direitos_-_aderencia_a_pautas_de_igualdade_de_genero.html"
+              title="GPS das Oportunidades para aderência à pauta de igualdade de gênero em Cuiabá"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="mapActions">
+              <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/natasha_comp__sem_base__mt__cuiaba__2022__igualdade_e_direitos_-_aderencia_a_pautas_de_igualdade_de_genero.html" target="_blank" rel="noopener noreferrer">Expandir mapa</a>
+            </div>
+          </section>
+
+          <section class="map-block" aria-labelledby="titulo-pauta-2">
+            <div class="map-heading">
+              <div>
+                <div class="map-kicker">PAUTA 2</div>
+                <h3 class="map-title" id="titulo-pauta-2">Religiosidade, valores morais, costumes e família</h3>
+              </div>
+              <span class="status-badge">Cuiabá</span>
+            </div>
+            <iframe
+              class="mapFrame"
+              loading="lazy"
+              src="https://quadrifygit.github.io/dataquadri/mapas/natasha_comp__sem_base__mt__cuiaba__2022__religiao_e_valores_-_religiosidade_valores_morais_costumes_familia.html"
+              title="GPS das Oportunidades para religiosidade, valores morais, costumes e família em Cuiabá"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="mapActions">
+              <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/natasha_comp__sem_base__mt__cuiaba__2022__religiao_e_valores_-_religiosidade_valores_morais_costumes_familia.html" target="_blank" rel="noopener noreferrer">Expandir mapa</a>
+            </div>
+          </section>
+
+          <section class="map-block" aria-labelledby="titulo-pauta-3">
+            <div class="map-heading">
+              <div>
+                <div class="map-kicker">PAUTA 3</div>
+                <h3 class="map-title" id="titulo-pauta-3">UBS, consultas, exames básicos e acesso ao SUS</h3>
+              </div>
+              <span class="status-badge">Cuiabá</span>
+            </div>
+            <iframe
+              class="mapFrame"
+              loading="lazy"
+              src="https://quadrifygit.github.io/dataquadri/mapas/natasha_comp__sem_base__mt__cuiaba__2022__saude_-_ubs_consultas_exames_basicos_acesso_sus.html"
+              title="GPS das Oportunidades para UBS, consultas, exames básicos e acesso ao SUS em Cuiabá"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="mapActions">
+              <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas/natasha_comp__sem_base__mt__cuiaba__2022__saude_-_ubs_consultas_exames_basicos_acesso_sus.html" target="_blank" rel="noopener noreferrer">Expandir mapa</a>
+            </div>
+          </section>
+
+          <section class="map-block" aria-labelledby="titulo-mapa-iraja">
+            <div class="map-heading">
+              <div>
+                <div class="map-kicker">DESEMPENHO ELEITORAL 2022</div>
+                <h3 class="map-title" id="titulo-mapa-iraja">Mapa do desempenho eleitoral de Irajá Lacerda</h3>
+              </div>
+              <span class="status-badge">Cuiabá</span>
+            </div>
+            <iframe
+              class="mapFrame"
+              loading="lazy"
+              src="https://quadrifygit.github.io/dataquadri/mapas2/urna_iraja_cuiaba_mt_2022.html"
+              title="Mapa do desempenho eleitoral de Irajá Lacerda em Cuiabá nas eleições de 2022"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="mapActions">
+              <a class="action-btn" href="https://quadrifygit.github.io/dataquadri/mapas2/urna_iraja_cuiaba_mt_2022.html" target="_blank" rel="noopener noreferrer">Expandir mapa</a>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="page narrow" id="coordenadas" data-nav="coordenadas">
+        <header class="pageHeader">
+          <div class="pageNumber">PÁGINA 3</div>
+          <h2 class="pageTitle">Coordenadas do GPS das oportunidades</h2>
+          <div class="pageDesc">Link direto para a planilha, o Drive ou a base de coordenadas do GPS das oportunidades.</div>
+        </header>
+
+        <div class="callout-card">
+          <div>
+            <div class="callout-title">Tabela Oportunidades</div>
+            <div class="callout-text">Acesse a tabela de oportunidades em nova guia para consulta detalhada.</div>
+          </div>
+          <a class="action-btn small map-btn" href="https://docs.google.com/spreadsheets/d/1SfBxKeDnGKsw5RUj8ehHAvXXOFvDc5WF/edit?usp=sharing&amp;ouid=114857027147481289571&amp;rtpof=true&amp;sd=true" rel="noopener" target="_blank">Abrir tabela</a>
+        </div>
+      </section>
+
+      <div class="footer-note">Quadrify • Pesquisa e Inteligência • Relatório territorial interativo</div>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      const links = Array.from(document.querySelectorAll('.side-nav a'));
+      const sections = Array.from(document.querySelectorAll('[data-nav]'));
+
+      function atualizarNavegacao() {
+        if (!links.length || !sections.length) return;
+
+        const pontoLeitura = window.scrollY + Math.min(window.innerHeight * 0.28, 240);
+        let atual = sections[0];
+
+        sections.forEach((section) => {
+          const topoAbsoluto = section.getBoundingClientRect().top + window.scrollY;
+          if (topoAbsoluto <= pontoLeitura) atual = section;
+        });
+
+        const chegouAoFim = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 24;
+        if (chegouAoFim) atual = sections[sections.length - 1];
+
+        const id = atual.getAttribute('data-nav');
+        links.forEach((link) => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+        });
+      }
+
+      let agendado = false;
+      function solicitarAtualizacao() {
+        if (agendado) return;
+        agendado = true;
+        window.requestAnimationFrame(() => {
+          atualizarNavegacao();
+          agendado = false;
+        });
+      }
+
+      window.addEventListener('scroll', solicitarAtualizacao, { passive: true });
+      window.addEventListener('resize', solicitarAtualizacao);
+      window.addEventListener('load', atualizarNavegacao);
+      atualizarNavegacao();
+    })();
+  </script>
+</body>
+</html>
